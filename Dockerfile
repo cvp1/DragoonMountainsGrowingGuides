@@ -1,0 +1,17 @@
+FROM nginx:alpine
+
+# Remove default nginx config
+RUN rm /etc/nginx/conf.d/default.conf
+
+# Copy our nginx template (uses $PORT env var)
+COPY nginx.conf /etc/nginx/templates/default.conf.template
+
+# Copy static site and PDFs
+COPY index.html /usr/share/nginx/html/
+COPY *.pdf /usr/share/nginx/html/
+
+# Railway injects PORT; nginx entrypoint processes templates automatically
+ENV PORT=9080
+EXPOSE 9080
+
+CMD ["/docker-entrypoint.sh", "nginx", "-g", "daemon off;"]
