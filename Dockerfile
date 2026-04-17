@@ -10,6 +10,9 @@ COPY nginx.conf /etc/nginx/templates/default.conf.template
 COPY index.html /usr/share/nginx/html/
 COPY *.pdf /usr/share/nginx/html/
 
+# Ensure nginx can read the served files (host may have restrictive umask)
+RUN chmod -R a+rX /usr/share/nginx/html
+
 # Railway injects PORT; nginx entrypoint processes templates automatically
 ENV PORT=9080
 EXPOSE 9080
