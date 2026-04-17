@@ -6,121 +6,150 @@
   <title>DMR Growing Guides</title>
   <style>
     :root {
-      --green-dark: #1a4731;
-      --green-mid: #2d6a4f;
-      --green-light: #52b788;
-      --green-pale: #d8f3dc;
-      --accent: #74c69d;
-      --text: #1b2d23;
-      --text-muted: #4a7c5f;
-      --bg: #f4faf6;
-      --card-bg: #ffffff;
-      --border: #b7e4c7;
-      --shadow: 0 2px 12px rgba(26, 71, 49, 0.10);
-      --shadow-hover: 0 6px 24px rgba(26, 71, 49, 0.18);
+      /* Warm watercolor palette — matches the PDF guides */
+      --paper:        #FBF5E6;   /* warm cream page */
+      --paper-deep:   #F4EAD1;   /* deeper cream */
+      --sand-pale:    #F4E9D0;
+      --sand:         #E6D5B0;
+      --peach:        #EED5BE;
+      --peach-deep:   #E3BE9F;
+
+      --body:         #2D2A22;   /* warm charcoal */
+      --body-muted:   #7A6F5A;   /* soft olive-brown */
+      --slate:        #5B5547;
+
+      --green-dark:   #3D5A3E;   /* sage dark */
+      --green-mid:    #5B7A53;   /* sage mid */
+      --green-light:  #8AA379;
+      --green-pale:   #D5DDC0;
+      --green-wash:   #E8EDD6;
+      --border-green: #B7C5A0;
+
+      --terracotta:       #B86848;
+      --terracotta-soft:  #C97D5F;
+      --gold:             #B89054;
+      --dusk:             #6A829A;
+
+      --shadow:       0 2px 12px rgba(61, 90, 62, 0.08);
+      --shadow-hover: 0 6px 22px rgba(184, 104, 72, 0.18);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+      background: var(--paper);
+      color: var(--body);
       min-height: 100vh;
+      line-height: 1.5;
     }
 
     header {
-      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 100%);
-      color: #fff;
-      padding: 48px 24px 40px;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(238, 213, 190, 0.55), transparent 55%),
+        radial-gradient(circle at 85% 90%, rgba(213, 221, 192, 0.55), transparent 55%),
+        linear-gradient(135deg, var(--paper-deep) 0%, var(--sand-pale) 100%);
+      color: var(--body);
+      padding: 56px 24px 44px;
       text-align: center;
       position: relative;
       overflow: hidden;
+      border-bottom: 1px solid var(--border-green);
     }
 
-    header::before {
+    header::after {
       content: "";
       position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      left: 0; right: 0; bottom: -1px;
+      height: 3px;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        var(--terracotta-soft) 30%,
+        var(--gold) 50%,
+        var(--green-mid) 70%,
+        transparent 100%);
+      opacity: 0.55;
     }
 
     header .leaf-icon {
-      font-size: 48px;
+      font-size: 44px;
       display: block;
-      margin-bottom: 12px;
-      position: relative;
+      margin-bottom: 10px;
     }
 
     header h1 {
-      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-size: clamp(1.9rem, 5vw, 2.9rem);
       font-weight: 700;
-      letter-spacing: -0.5px;
-      position: relative;
+      letter-spacing: -0.3px;
+      color: var(--green-dark);
     }
 
     header p {
-      margin-top: 10px;
+      margin-top: 8px;
       font-size: 1.05rem;
-      opacity: 0.85;
-      position: relative;
+      color: var(--slate);
+      font-style: italic;
     }
 
     .badge {
       display: inline-block;
-      margin-top: 16px;
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.3);
-      color: #fff;
-      padding: 4px 14px;
+      margin-top: 18px;
+      background: rgba(184, 104, 72, 0.10);
+      border: 1px solid rgba(184, 104, 72, 0.35);
+      color: var(--terracotta);
+      padding: 5px 14px;
       border-radius: 999px;
-      font-size: 0.8rem;
-      letter-spacing: 0.5px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
-      position: relative;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
 
     main {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 48px 24px 80px;
+      padding: 52px 24px 80px;
     }
 
     .section-label {
       display: flex;
       align-items: center;
-      gap: 10px;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      font-weight: 600;
+      gap: 12px;
+      color: var(--green-dark);
+      font-size: 0.78rem;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 24px;
+      letter-spacing: 1.8px;
+      margin-bottom: 26px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
 
     .section-label::after {
       content: "";
       flex: 1;
       height: 1px;
-      background: var(--border);
+      background: linear-gradient(90deg, var(--border-green), transparent);
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px;
+      gap: 22px;
     }
 
     .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 24px;
+      background: #FFFBEE;
+      border: 1px solid var(--border-green);
+      border-left: 4px solid var(--green-mid);
+      border-radius: 8px;
+      padding: 22px 24px;
       display: flex;
       flex-direction: column;
       gap: 12px;
       box-shadow: var(--shadow);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease,
+                  border-color 0.2s ease, border-left-color 0.2s ease;
       text-decoration: none;
       color: inherit;
     }
@@ -128,20 +157,30 @@
     .card:hover {
       transform: translateY(-3px);
       box-shadow: var(--shadow-hover);
-      border-color: var(--green-light);
+      border-left-color: var(--terracotta);
     }
 
+    /* Alternate accent bars so the grid feels painterly, not uniform */
+    .card:nth-child(3n+2) { border-left-color: var(--terracotta-soft); }
+    .card:nth-child(3n+3) { border-left-color: var(--gold); }
+    .card:nth-child(3n+2):hover { border-left-color: var(--terracotta); }
+    .card:nth-child(3n+3):hover { border-left-color: var(--green-dark); }
+
     .card-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 10px;
-      background: var(--green-pale);
+      width: 46px;
+      height: 46px;
+      border-radius: 8px;
+      background: var(--green-wash);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 24px;
+      font-size: 22px;
       flex-shrink: 0;
+      border: 1px solid var(--border-green);
     }
+
+    .card:nth-child(3n+2) .card-icon { background: var(--peach);       border-color: var(--peach-deep); }
+    .card:nth-child(3n+3) .card-icon { background: var(--sand-pale);   border-color: var(--sand); }
 
     .card-header {
       display: flex;
@@ -149,29 +188,32 @@
       gap: 14px;
     }
 
-    .card-meta {
-      flex: 1;
-    }
+    .card-meta { flex: 1; }
 
     .card-category {
-      font-size: 0.72rem;
-      font-weight: 600;
+      font-size: 0.68rem;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.8px;
-      color: var(--green-mid);
+      letter-spacing: 1.4px;
+      color: var(--terracotta);
       margin-bottom: 4px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
 
+    .card:nth-child(3n+2) .card-category { color: var(--gold); }
+    .card:nth-child(3n+3) .card-category { color: var(--green-dark); }
+
     .card-title {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--text);
-      line-height: 1.3;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      line-height: 1.25;
+      letter-spacing: -0.2px;
     }
 
     .card-desc {
-      font-size: 0.88rem;
-      color: var(--text-muted);
+      font-size: 0.93rem;
+      color: var(--slate);
       line-height: 1.55;
     }
 
@@ -180,13 +222,15 @@
       align-items: center;
       justify-content: space-between;
       margin-top: auto;
-      padding-top: 12px;
-      border-top: 1px solid var(--green-pale);
+      padding-top: 14px;
+      border-top: 1px dashed var(--border-green);
     }
 
     .file-size {
-      font-size: 0.78rem;
-      color: var(--text-muted);
+      font-size: 0.76rem;
+      color: var(--body-muted);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      letter-spacing: 0.3px;
     }
 
     .btn-view {
@@ -194,35 +238,40 @@
       align-items: center;
       gap: 6px;
       background: var(--green-mid);
-      color: #fff;
+      color: #FBF5E6;
       border: none;
-      border-radius: 8px;
+      border-radius: 6px;
       padding: 7px 14px;
-      font-size: 0.83rem;
+      font-size: 0.8rem;
       font-weight: 600;
       cursor: pointer;
       text-decoration: none;
       transition: background 0.15s ease;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      letter-spacing: 0.3px;
     }
 
-    .btn-view:hover { background: var(--green-dark); }
+    .card:hover .btn-view { background: var(--terracotta); }
 
     .btn-view svg {
-      width: 14px;
-      height: 14px;
+      width: 13px;
+      height: 13px;
     }
 
     footer {
       text-align: center;
-      padding: 32px 24px;
-      color: var(--text-muted);
+      padding: 28px 24px 36px;
+      color: var(--body-muted);
       font-size: 0.82rem;
-      border-top: 1px solid var(--border);
+      font-style: italic;
+      border-top: 1px solid var(--border-green);
+      background: var(--sand-pale);
     }
 
     @media (max-width: 480px) {
       .grid { grid-template-columns: 1fr; }
-      header { padding: 36px 20px 32px; }
+      header { padding: 40px 20px 34px; }
+      main { padding: 40px 20px 60px; }
     }
   </style>
 </head>
@@ -231,7 +280,7 @@
 <header>
   <span class="leaf-icon">🌿</span>
   <h1>DMR Growing Guides</h1>
-  <p>Hydroponic &amp; horticultural reference documents</p>
+  <p>Hydroponic &amp; horticultural reference — Cochise County, Arizona</p>
   <span class="badge">Resource Library</span>
 </header>
 
@@ -239,107 +288,35 @@
   <div class="section-label">All Documents</div>
   <div class="grid">
 
-    <a class="card" href="bato_bucket_guide_v3.pdf" target="_blank">
-      <div class="card-header">
-        <div class="card-icon">🪣</div>
-        <div class="card-meta">
-          <div class="card-category">Hydroponic Systems</div>
-          <div class="card-title">Bato Bucket Guide</div>
-        </div>
-      </div>
-      <div class="card-desc">Comprehensive guide to setting up and managing Bato (Dutch) bucket hydroponic systems for high-yield crops.</div>
-      <div class="card-footer">
-        <span class="file-size">380 KB · PDF</span>
-        <span class="btn-view">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Open
-        </span>
-      </div>
-    </a>
-
-    <a class="card" href="dragoon_grape_growing_guide.pdf" target="_blank">
-      <div class="card-header">
-        <div class="card-icon">🍇</div>
-        <div class="card-meta">
-          <div class="card-category">Viticulture</div>
-          <div class="card-title">Grape Growing Guide</div>
-        </div>
-      </div>
-      <div class="card-desc">Dragoon series guide covering grape cultivation techniques, trellising, pruning, and nutrient management.</div>
-      <div class="card-footer">
-        <span class="file-size">47 KB · PDF</span>
-        <span class="btn-view">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Open
-        </span>
-      </div>
-    </a>
-
-    <a class="card" href="dragoon_hydroponic_guide.pdf" target="_blank">
-      <div class="card-header">
-        <div class="card-icon">💧</div>
-        <div class="card-meta">
-          <div class="card-category">Hydroponics</div>
-          <div class="card-title">Hydroponic Guide</div>
-        </div>
-      </div>
-      <div class="card-desc">Core hydroponic principles and Dragoon-specific setup instructions for recirculating and drain-to-waste systems.</div>
-      <div class="card-footer">
-        <span class="file-size">34 KB · PDF</span>
-        <span class="btn-view">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Open
-        </span>
-      </div>
-    </a>
-
-    <a class="card" href="dragoon_hydroponic_nutrients.pdf" target="_blank">
-      <div class="card-header">
-        <div class="card-icon">🧪</div>
-        <div class="card-meta">
-          <div class="card-category">Nutrients</div>
-          <div class="card-title">Hydroponic Nutrients</div>
-        </div>
-      </div>
-      <div class="card-desc">Nutrient formulations, EC targets, and feeding schedules tailored for the Dragoon hydroponic program.</div>
-      <div class="card-footer">
-        <span class="file-size">11 KB · PDF</span>
-        <span class="btn-view">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Open
-        </span>
-      </div>
-    </a>
-
-    <a class="card" href="dragoon_masterblend_modern_guide.pdf" target="_blank">
-      <div class="card-header">
-        <div class="card-icon">⚗️</div>
-        <div class="card-meta">
-          <div class="card-category">Nutrients</div>
-          <div class="card-title">Masterblend Modern Guide</div>
-        </div>
-      </div>
-      <div class="card-desc">Updated Masterblend 4-18-38 mixing ratios, calcium nitrate &amp; Epsom salt calculations, and modern application methods.</div>
-      <div class="card-footer">
-        <span class="file-size">47 KB · PDF</span>
-        <span class="btn-view">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Open
-        </span>
-      </div>
-    </a>
-
     <a class="card" href="dragoon_pepper_growing_guide.pdf" target="_blank">
       <div class="card-header">
         <div class="card-icon">🌶️</div>
         <div class="card-meta">
-          <div class="card-category">Pepper Cultivation</div>
+          <div class="card-category">Guide A · Pepper Cultivation</div>
           <div class="card-title">Pepper Growing Guide</div>
         </div>
       </div>
-      <div class="card-desc">Soil and container-based pepper growing strategies covering varieties, pruning, and harvest timing.</div>
+      <div class="card-desc">Soil and container-based pepper growing strategies — varieties, pruning, and harvest timing for the Dragoons.</div>
       <div class="card-footer">
-        <span class="file-size">55 KB · PDF</span>
+        <span class="file-size">501 KB · PDF</span>
+        <span class="btn-view">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Open
+        </span>
+      </div>
+    </a>
+
+    <a class="card" href="bato_bucket_guide_v3.pdf" target="_blank">
+      <div class="card-header">
+        <div class="card-icon">🪣</div>
+        <div class="card-meta">
+          <div class="card-category">Guide B · Hydroponic Systems</div>
+          <div class="card-title">Bato Bucket Guide</div>
+        </div>
+      </div>
+      <div class="card-desc">Complete Bato (Dutch) bucket hydroponic setup — from plumbing to reservoir management for high-yield pepper crops.</div>
+      <div class="card-footer">
+        <span class="file-size">764 KB · PDF</span>
         <span class="btn-view">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           Open
@@ -351,13 +328,13 @@
       <div class="card-header">
         <div class="card-icon">🌶️</div>
         <div class="card-meta">
-          <div class="card-category">Pepper · Hydroponics</div>
-          <div class="card-title">Pepper Hydroponic Guide</div>
+          <div class="card-category">Guide C · Pepper + Hydroponics</div>
+          <div class="card-title">Hydroponic Pepper Guide</div>
         </div>
       </div>
-      <div class="card-desc">Hydroponic-specific pepper production guide with EC/pH targets, irrigation scheduling, and yield optimization.</div>
+      <div class="card-desc">Hydroponic-specific pepper production — EC/pH targets, irrigation scheduling, and yield optimization.</div>
       <div class="card-footer">
-        <span class="file-size">60 KB · PDF</span>
+        <span class="file-size">499 KB · PDF</span>
         <span class="btn-view">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           Open
@@ -365,17 +342,89 @@
       </div>
     </a>
 
-    <a class="card" href="ph_down_replacements.pdf" target="_blank">
+    <a class="card" href="dragoon_hydroponic_primer.pdf" target="_blank">
+      <div class="card-header">
+        <div class="card-icon">💧</div>
+        <div class="card-meta">
+          <div class="card-category">Guide D · Hydroponics</div>
+          <div class="card-title">Hydroponic Primer</div>
+        </div>
+      </div>
+      <div class="card-desc">Core hydroponic principles and Dragoon-specific setup instructions — water treatment, seasonal calendar, and troubleshooting.</div>
+      <div class="card-footer">
+        <span class="file-size">456 KB · PDF</span>
+        <span class="btn-view">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Open
+        </span>
+      </div>
+    </a>
+
+    <a class="card" href="dragoon_masterblend_modern_guide.pdf" target="_blank">
+      <div class="card-header">
+        <div class="card-icon">⚗️</div>
+        <div class="card-meta">
+          <div class="card-category">Guide E · Nutrients</div>
+          <div class="card-title">Masterblend Modern Guide</div>
+        </div>
+      </div>
+      <div class="card-desc">Masterblend 4-18-38 mixing ratios, calcium nitrate &amp; Epsom salt calculations, and modern three-part application methods.</div>
+      <div class="card-footer">
+        <span class="file-size">476 KB · PDF</span>
+        <span class="btn-view">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Open
+        </span>
+      </div>
+    </a>
+
+    <a class="card" href="dragoon_hydroponic_nutrients.pdf" target="_blank">
+      <div class="card-header">
+        <div class="card-icon">🧪</div>
+        <div class="card-meta">
+          <div class="card-category">Guide F · Nutrients</div>
+          <div class="card-title">DIY Hydroponic Nutrients</div>
+        </div>
+      </div>
+      <div class="card-desc">Local-source nutrient brewing — oak ash potash, bat guano tea, caliche calcium, and the three-part recipe.</div>
+      <div class="card-footer">
+        <span class="file-size">440 KB · PDF</span>
+        <span class="btn-view">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Open
+        </span>
+      </div>
+    </a>
+
+    <a class="card" href="ph_up_down_replacements.pdf" target="_blank">
       <div class="card-header">
         <div class="card-icon">🔬</div>
         <div class="card-meta">
-          <div class="card-category">Water Chemistry</div>
-          <div class="card-title">pH Down Replacements</div>
+          <div class="card-category">Guide G · Water Chemistry</div>
+          <div class="card-title">pH Up &amp; pH Down Replacements</div>
         </div>
       </div>
-      <div class="card-desc">Alternative acidifying agents for pH adjustment — comparing citric acid, phosphoric acid, and other substitutes.</div>
+      <div class="card-desc">Foraged and homemade pH adjusters — apple-cider vinegar, citric acid, oak-ash potash, and calcium carbonate.</div>
       <div class="card-footer">
-        <span class="file-size">22 KB · PDF</span>
+        <span class="file-size">470 KB · PDF</span>
+        <span class="btn-view">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Open
+        </span>
+      </div>
+    </a>
+
+    <a class="card" href="dragoon_grape_growing_guide.pdf" target="_blank">
+      <div class="card-header">
+        <div class="card-icon">🍇</div>
+        <div class="card-meta">
+          <div class="card-category">Guide H · Viticulture</div>
+          <div class="card-title">Grape Growing Guide</div>
+        </div>
+      </div>
+      <div class="card-desc">Cochise County viticulture — variety selection, trellising, pruning, and nutrient management for Dragoon-climate vineyards.</div>
+      <div class="card-footer">
+        <span class="file-size">480 KB · PDF</span>
         <span class="btn-view">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           Open
@@ -387,7 +436,7 @@
 </main>
 
 <footer>
-  DMR Growing Guides &mdash; All documents for reference use
+  DMR Growing Guides &mdash; Cochise County &middot; Arizona
 </footer>
 
 </body>
