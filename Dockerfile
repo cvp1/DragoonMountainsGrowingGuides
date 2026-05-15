@@ -8,7 +8,9 @@ COPY nginx.conf /etc/nginx/templates/default.conf.template
 
 # Copy static site and PDFs
 COPY index.html /usr/share/nginx/html/
+COPY pictures.html /usr/share/nginx/html/
 COPY *.pdf /usr/share/nginx/html/
+COPY pictures/ /usr/share/nginx/html/pictures/
 
 # Ensure nginx can read the served files (host may have restrictive umask)
 RUN chmod -R a+rX /usr/share/nginx/html

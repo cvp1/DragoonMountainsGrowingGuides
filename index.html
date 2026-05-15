@@ -71,6 +71,139 @@
       opacity: 0.55;
     }
 
+    .top-nav {
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      display: flex;
+      gap: 8px;
+      z-index: 2;
+    }
+    .top-nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--green-dark);
+      text-decoration: none;
+      padding: 6px 14px;
+      border: 1px solid var(--border-green);
+      background: rgba(255,251,238,0.75);
+      border-radius: 999px;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .top-nav a:hover {
+      background: var(--green-wash);
+      border-color: var(--green-mid);
+    }
+    .top-nav svg { width: 13px; height: 13px; }
+
+    /* Photo preview strip */
+    .photo-strip-section {
+      margin-top: 56px;
+    }
+    .section-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 22px;
+      gap: 16px;
+    }
+    .section-header-row .section-label {
+      margin-bottom: 0;
+      flex: 1;
+    }
+    .see-all-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--terracotta);
+      text-decoration: none;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+    }
+    .see-all-link:hover { color: var(--green-dark); }
+    .see-all-link svg { width: 12px; height: 12px; }
+
+    .photo-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+    .photo-tile {
+      position: relative;
+      display: block;
+      aspect-ratio: 4 / 3;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border-green);
+      box-shadow: var(--shadow);
+      background: var(--sand-pale);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+    .photo-tile:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+    .photo-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .photo-tile:hover img { transform: scale(1.05); }
+    .photo-tile .tile-cap {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      padding: 18px 14px 10px;
+      background: linear-gradient(to top, rgba(45,42,34,0.85), transparent);
+      color: var(--paper);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    .photo-tile.more {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--green-wash);
+      border-style: dashed;
+      color: var(--green-dark);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .photo-tile.more .more-inner {
+      text-align: center;
+    }
+    .photo-tile.more .more-icon {
+      font-size: 2rem;
+      margin-bottom: 4px;
+      color: var(--terracotta);
+    }
+    .photo-tile.more .more-text {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .photo-tile.more .more-sub {
+      font-size: 0.72rem;
+      color: var(--slate);
+      margin-top: 2px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+    }
+
     header .leaf-icon {
       font-size: 44px;
       display: block;
@@ -278,6 +411,12 @@
 <body>
 
 <header>
+  <nav class="top-nav">
+    <a href="pictures.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+      Pictures
+    </a>
+  </nav>
   <span class="leaf-icon">🌿</span>
   <h1>DMR Growing Guides</h1>
   <p>Hydroponic &amp; horticultural reference — Cochise County, Arizona</p>
@@ -288,17 +427,17 @@
   <div class="section-label">All Documents</div>
   <div class="grid">
 
-    <a class="card" href="dragoon_pepper_growing_guide.pdf" target="_blank">
+    <a class="card" href="guide4_primer.pdf" target="_blank">
       <div class="card-header">
-        <div class="card-icon">🌶️</div>
+        <div class="card-icon">📖</div>
         <div class="card-meta">
-          <div class="card-category">Guide A · Pepper Cultivation</div>
-          <div class="card-title">Pepper Growing Guide</div>
+          <div class="card-category">Guide 4 · Start Here</div>
+          <div class="card-title">Hydroponic Primer &amp; Library Map</div>
         </div>
       </div>
-      <div class="card-desc">Soil and container-based pepper growing strategies — varieties, pruning, and harvest timing for the Dragoons.</div>
+      <div class="card-desc">The front door — how to use this library, the 6-guide map, the master multi-crop Dragoons calendar, and a troubleshooting tree pointing into the rest.</div>
       <div class="card-footer">
-        <span class="file-size">501 KB · PDF</span>
+        <span class="file-size">492 KB · PDF</span>
         <span class="btn-view">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           Open
@@ -306,17 +445,35 @@
       </div>
     </a>
 
-    <a class="card" href="bato_bucket_guide_v3.pdf" target="_blank">
+    <a class="card" href="guide1_peppers.pdf" target="_blank">
+      <div class="card-header">
+        <div class="card-icon">🌶️</div>
+        <div class="card-meta">
+          <div class="card-category">Guide 1 · Warm-Season Track</div>
+          <div class="card-title">Peppers in the Dragoons</div>
+        </div>
+      </div>
+      <div class="card-desc">The complete pepper reference — soil track, hydroponic track, and variety-specific staking. Merges the prior pepper growing, hydroponic, and bato-staking guides into one volume.</div>
+      <div class="card-footer">
+        <span class="file-size">525 KB · PDF</span>
+        <span class="btn-view">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Open
+        </span>
+      </div>
+    </a>
+
+    <a class="card" href="guide2_bato_buckets.pdf" target="_blank">
       <div class="card-header">
         <div class="card-icon">🪣</div>
         <div class="card-meta">
-          <div class="card-category">Guide B · Hydroponic Systems</div>
-          <div class="card-title">Bato Bucket Guide</div>
+          <div class="card-category">Guide 2 · System Build &amp; Operation</div>
+          <div class="card-title">Bato Bucket Hydroponic Systems</div>
         </div>
       </div>
-      <div class="card-desc">Complete Bato (Dutch) bucket hydroponic setup — from plumbing to reservoir management for high-yield pepper crops.</div>
+      <div class="card-desc">Complete Dutch bucket build manual — equipment, bench construction, plumbing &amp; solar, and the canonical 5-step Cochise bicarbonate water-treatment protocol.</div>
       <div class="card-footer">
-        <span class="file-size">764 KB · PDF</span>
+        <span class="file-size">465 KB · PDF</span>
         <span class="btn-view">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           Open
@@ -324,53 +481,17 @@
       </div>
     </a>
 
-    <a class="card" href="dragoon_pepper_hydroponic_guide.pdf" target="_blank">
-      <div class="card-header">
-        <div class="card-icon">🌶️</div>
-        <div class="card-meta">
-          <div class="card-category">Guide C · Pepper + Hydroponics</div>
-          <div class="card-title">Hydroponic Pepper Guide</div>
-        </div>
-      </div>
-      <div class="card-desc">Hydroponic-specific pepper production — EC/pH targets, irrigation scheduling, and yield optimization.</div>
-      <div class="card-footer">
-        <span class="file-size">499 KB · PDF</span>
-        <span class="btn-view">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Open
-        </span>
-      </div>
-    </a>
-
-    <a class="card" href="dragoon_hydroponic_primer.pdf" target="_blank">
-      <div class="card-header">
-        <div class="card-icon">💧</div>
-        <div class="card-meta">
-          <div class="card-category">Guide D · Hydroponics</div>
-          <div class="card-title">Hydroponic Primer</div>
-        </div>
-      </div>
-      <div class="card-desc">Core hydroponic principles and Dragoon-specific setup instructions — water treatment, seasonal calendar, and troubleshooting.</div>
-      <div class="card-footer">
-        <span class="file-size">456 KB · PDF</span>
-        <span class="btn-view">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Open
-        </span>
-      </div>
-    </a>
-
-    <a class="card" href="dragoon_masterblend_modern_guide.pdf" target="_blank">
+    <a class="card" href="guide3_nutrients.pdf" target="_blank">
       <div class="card-header">
         <div class="card-icon">⚗️</div>
         <div class="card-meta">
-          <div class="card-category">Guide E · Nutrients</div>
-          <div class="card-title">Masterblend Modern Guide</div>
+          <div class="card-category">Guide 3 · Nutrients, pH &amp; Precision</div>
+          <div class="card-title">Hydroponic Nutrients</div>
         </div>
       </div>
-      <div class="card-desc">Masterblend 4-18-38 mixing ratios, calcium nitrate &amp; Epsom salt calculations, and modern three-part application methods.</div>
+      <div class="card-desc">One reference for everything nutrient-and-acid: Masterblend (precision), locally-sourced DIY (oak ash, bat guano, caliche), pH Up/Down recipes, plus LED/VPD/automation for indoor production.</div>
       <div class="card-footer">
-        <span class="file-size">476 KB · PDF</span>
+        <span class="file-size">521 KB · PDF</span>
         <span class="btn-view">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           Open
@@ -378,53 +499,17 @@
       </div>
     </a>
 
-    <a class="card" href="dragoon_hydroponic_nutrients.pdf" target="_blank">
-      <div class="card-header">
-        <div class="card-icon">🧪</div>
-        <div class="card-meta">
-          <div class="card-category">Guide F · Nutrients</div>
-          <div class="card-title">DIY Hydroponic Nutrients</div>
-        </div>
-      </div>
-      <div class="card-desc">Local-source nutrient brewing — oak ash potash, bat guano tea, caliche calcium, and the three-part recipe.</div>
-      <div class="card-footer">
-        <span class="file-size">440 KB · PDF</span>
-        <span class="btn-view">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Open
-        </span>
-      </div>
-    </a>
-
-    <a class="card" href="ph_up_down_replacements.pdf" target="_blank">
-      <div class="card-header">
-        <div class="card-icon">🔬</div>
-        <div class="card-meta">
-          <div class="card-category">Guide G · Water Chemistry</div>
-          <div class="card-title">pH Up &amp; pH Down Replacements</div>
-        </div>
-      </div>
-      <div class="card-desc">Foraged and homemade pH adjusters — apple-cider vinegar, citric acid, oak-ash potash, and calcium carbonate.</div>
-      <div class="card-footer">
-        <span class="file-size">470 KB · PDF</span>
-        <span class="btn-view">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Open
-        </span>
-      </div>
-    </a>
-
-    <a class="card" href="dragoon_grape_growing_guide.pdf" target="_blank">
+    <a class="card" href="guide5_grapes.pdf" target="_blank">
       <div class="card-header">
         <div class="card-icon">🍇</div>
         <div class="card-meta">
-          <div class="card-category">Guide H · Viticulture</div>
-          <div class="card-title">Grape Growing Guide</div>
+          <div class="card-category">Guide 5 · Viticulture</div>
+          <div class="card-title">Grapes in the Dragoons</div>
         </div>
       </div>
-      <div class="card-desc">Cochise County viticulture — variety selection, trellising, pruning, and nutrient management for Dragoon-climate vineyards.</div>
+      <div class="card-desc">Cochise County viticulture — variety selection (red &amp; white), pre-plant soil prep, VSP trellis, irrigation by stage, annual nutrition, pruning, and harvest-to-handoff for wine and juice.</div>
       <div class="card-footer">
-        <span class="file-size">480 KB · PDF</span>
+        <span class="file-size">475 KB · PDF</span>
         <span class="btn-view">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           Open
@@ -432,17 +517,17 @@
       </div>
     </a>
 
-    <a class="card" href="bato_bucket_staking_guide.pdf" target="_blank">
+    <a class="card" href="guide6_cool_season.pdf" target="_blank">
       <div class="card-header">
-        <div class="card-icon">🪢</div>
+        <div class="card-icon">🥬</div>
         <div class="card-meta">
-          <div class="card-category">Guide I · Hydroponic Pepper Support</div>
-          <div class="card-title">Bato Bucket Staking Guide</div>
+          <div class="card-category">Guide 6 · Cool-Season Track</div>
+          <div class="card-title">Cool-Season Crops</div>
         </div>
       </div>
-      <div class="card-desc">Variety-specific support strategies for outdoor bato bucket hydroponics — overhead line, stake &amp; string, pruning protocols for jalapeño, poblano, rocoto, and cayenne.</div>
+      <div class="card-desc">Brassicas, alliums, cool-season greens, and root crops for the Dragoon winter window — from August garlic planting through April spinach. The cool-season counterpart to Guide 1.</div>
       <div class="card-footer">
-        <span class="file-size">37 KB · PDF</span>
+        <span class="file-size">533 KB · PDF</span>
         <span class="btn-view">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           Open
@@ -451,6 +536,37 @@
     </a>
 
   </div>
+
+  <section class="photo-strip-section">
+    <div class="section-header-row">
+      <div class="section-label">From the Field</div>
+      <a class="see-all-link" href="pictures.html">
+        View full gallery
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
+    <div class="photo-strip">
+      <a class="photo-tile" href="pictures.html">
+        <img src="pictures/Buckets4.jpg" alt="Two-tier bato bucket rack" loading="lazy" />
+        <div class="tile-cap">Two-Tier Bucket Rack</div>
+      </a>
+      <a class="photo-tile" href="pictures.html">
+        <img src="pictures/NFT_Greens.jpg" alt="NFT lettuce tower" loading="lazy" />
+        <div class="tile-cap">NFT Lettuce Tower</div>
+      </a>
+      <a class="photo-tile" href="pictures.html">
+        <img src="pictures/dragoon_mountains_vista.jpg" alt="Dragoon Mountains vista" loading="lazy" />
+        <div class="tile-cap">Dragoon Mountains</div>
+      </a>
+      <a class="photo-tile more" href="pictures.html">
+        <div class="more-inner">
+          <div class="more-icon">+</div>
+          <div class="more-text">View all 9 photos</div>
+          <div class="more-sub">plants, setups &amp; place</div>
+        </div>
+      </a>
+    </div>
+  </section>
 </main>
 
 <footer>
