@@ -1,0 +1,46 @@
+# Files Railway should NOT upload to the build server.
+# (Docker .dockerignore only filters the build context AFTER upload;
+#  this file controls what gets sent in the first place.)
+
+# Version control — huge, not needed in the image
+.git
+.gitignore
+
+# IDE / OS cruft
+.stfolder
+.DS_Store
+.claude
+
+# Source material not needed at runtime
+revised
+*.md
+*.log
+
+# Node / Python
+node_modules
+__pycache__
+*.pyc
+.env
+.env.*
+
+# Raw camera originals — we ship the web-optimized .jpg variants only.
+# Each .jpeg is 4-7 MB and collectively they're 42 MB of upload we don't need.
+pictures/*.jpeg
+pictures/*.JPEG
+pictures/*.JPG
+
+# Superseded PDFs from the pre-consolidation library — kept in git for
+# archival; only the new guide1_*…guide6_* PDFs are deployed.
+dragoon_pepper_growing_guide.pdf
+bato_bucket_guide_v3.pdf
+dragoon_pepper_hydroponic_guide.pdf
+dragoon_hydroponic_primer.pdf
+dragoon_masterblend_modern_guide.pdf
+dragoon_hydroponic_nutrients.pdf
+ph_up_down_replacements.pdf
+dragoon_grape_growing_guide.pdf
+bato_bucket_staking_guide.pdf
+dragoon_brassica_growing_guide.pdf
+
+# Build artifacts
+.railway

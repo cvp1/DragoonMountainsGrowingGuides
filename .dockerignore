@@ -1,3 +1,30 @@
+# Don't upload to Railway / send to Docker build context
+.git
+.gitignore
 .stfolder
 .DS_Store
+.claude
+revised
 *.md
+*.log
+node_modules
+.env
+.env.*
+
+# Keep only web-optimized .jpg variants of the photos; the raw .jpeg originals
+# are large (4-7 MB each) and would balloon the build context.
+pictures/*.jpeg
+
+# Superseded by the consolidated 6-guide library (May 2026 restructure).
+# Originals stay in git for archival; only the new guide1_* … guide6_* PDFs
+# are served from the site.
+dragoon_pepper_growing_guide.pdf
+bato_bucket_guide_v3.pdf
+dragoon_pepper_hydroponic_guide.pdf
+dragoon_hydroponic_primer.pdf
+dragoon_masterblend_modern_guide.pdf
+dragoon_hydroponic_nutrients.pdf
+ph_up_down_replacements.pdf
+dragoon_grape_growing_guide.pdf
+bato_bucket_staking_guide.pdf
+dragoon_brassica_growing_guide.pdf

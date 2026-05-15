@@ -1,0 +1,22 @@
+# OS / IDE
+.DS_Store
+.stfolder
+.claude
+
+# Raw camera-sized originals — keep only the web-optimized .jpg variants in git
+pictures/*.jpeg
+pictures/*.JPEG
+pictures/*.JPG
+
+# Node / Python
+node_modules
+__pycache__
+*.pyc
+
+# Environment
+.env
+.env.*
+
+# Build / deploy artifacts
+.railway
+*.log
