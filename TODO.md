@@ -542,7 +542,7 @@ both first-timers (step-by-step) and experts (variations).
 
 Cross-library improvements that benefit all guides at once.
 
-### C1 · Glossary appendix
+### C1 · Glossary appendix [INTEGRATED in Guide 4 · Glossary chapter · 2026-05-16]
 *Captured: 2026-05-16*
 
 EC, pH, VPD, PPFD, DLI, NFT, DWC, VSP, SHU, mS, ppm, Brix, TA…
@@ -557,7 +557,7 @@ jargon. Single glossary lookup is friendlier than digging.
 
 ---
 
-### C2 · Variety index across all guides
+### C2 · Variety index across all guides [INTEGRATED in Guide 4 · Variety Index chapter · 2026-05-16]
 *Captured: 2026-05-16*
 
 A reader asking "where do you mention *Costata Romanesco*?" or "which
@@ -573,7 +573,7 @@ file that's web-friendly.
 
 ---
 
-### C3 · Versioning, changelog, and revision dates per guide
+### C3 · Versioning, changelog, and revision dates per guide [PARTIAL: per-guide version+date INTEGRATED 2026-05-16; CHANGELOG.md still open]
 *Captured: 2026-05-16*
 
 No guide currently shows a version number or a "last revised" date.
@@ -637,7 +637,7 @@ needed; possibly add a print-optimized variant flag.
 
 ---
 
-### C6 · Embed photos inside the guides
+### C6 · Embed photos inside the guides [INTEGRATED across 8 guides · 2026-05-16]
 *Captured: 2026-05-16*
 
 The guides currently use only a single cover image (the Dragoon
@@ -660,7 +660,7 @@ markdown `![caption](pictures/foo.jpg)` syntax.
 
 ---
 
-### C7 · Update pictures.html to match the new homepage masthead design
+### C7 · Update pictures.html to match the new homepage masthead design [INTEGRATED 2026-05-16]
 *Captured: 2026-05-16*
 
 The redesigned homepage now uses a side-by-side masthead, refined
@@ -678,10 +678,54 @@ scheme.
 
 ## D · Editorial improvements to existing guides
 
-These are quality/depth audits of the current 6 guides against
+These are quality/depth audits of the current guides against
 PRINCIPLES.md.
 
-### D1 · Audit existing 6 guides against PRINCIPLES.md
+### D0 · Update `::: relatedguides` blocks across all 9 guides [INTEGRATED 2026-05-16]
+*Captured: 2026-05-16*
+
+Guides 1–6 were drafted when the library had only 6 guides; their
+`::: relatedguides` blocks list only those six. Guides 7, 8, and 9
+list all nine. The older blocks need updating so every guide gives
+the same library map.
+
+Scope:
+
+- **Guide 1 (Peppers)** — relatedguides block still ends at Guide 6.
+  Needs Guides 7, 8, 9 added with one-line descriptions.
+- **Guide 2 (Bato Buckets)** — same.
+- **Guide 3 (Nutrients)** — same.
+- **Guide 4 (Primer &amp; Library Map)** — most important to update
+  since this is the front door; the "6-guide map" chapter (§3) and
+  the by-goal decision tree in §2 both need expanding to mention the
+  new crop guides as the natural next step from goals like "grow
+  tomatoes," "plant a fig tree," "set up a kitchen herb garden."
+- **Guide 5 (Grapes)** — same.
+- **Guide 6 (Cool-Season Crops)** — same.
+
+While in each file, also check that any prose cross-references to
+"the 6-guide library" or similar phrasing get updated to "the
+library" or "the nine guides."
+
+For Guide 4 specifically, the master multi-crop calendar (§9) may
+warrant a refresh now that we have warm-season-companions and
+orchard timing covered elsewhere — extend the table columns or add
+rows for orchard-tree maintenance.
+
+*Why it matters:* serves the editorial principle that every guide
+should orient the reader to the rest of the library. Currently a
+reader who picks up Guide 5 (Grapes) doesn't even know Guide 9
+(Orchard) exists, which is exactly the next guide they probably want.
+Also keeps the library feeling like a coherent set rather than an
+accumulating archive.
+
+*Suggested home:* edit each of the 6 older markdown files in place,
+rebuild PDFs, copy to DMR/, regenerate. Could be a single agent task
+since it's a mechanical pass.
+
+---
+
+### D1 · Audit existing guides against PRINCIPLES.md [INTEGRATED 2026-05-16 — findings in agent reports]
 *Captured: 2026-05-15*
 
 We codified the editorial principles after the 10→6 consolidation.
@@ -704,7 +748,7 @@ Capture findings as sub-entries under this item.
 
 ---
 
-### D2 · Add "If you're new here" callouts in the long guides
+### D2 · Add "If you're new here" callouts in the long guides [INTEGRATED 2026-05-16]
 *Captured: 2026-05-16*
 
 PRINCIPLES.md calls for these but they aren't consistently used.
@@ -724,7 +768,7 @@ chapters.
 
 ---
 
-### D3 · Sources & references section per guide
+### D3 · Sources & references section per guide [INTEGRATED across all 9 guides · 2026-05-16]
 *Captured: 2026-05-16*
 
 The guides claim local-source recipes (oak ash potash, caliche
@@ -744,7 +788,7 @@ Adding a "Sources & references" appendix to each guide would:
 
 ---
 
-### D4 · Glossary terms expanded inline on first use
+### D4 · Glossary terms expanded inline on first use [INTEGRATED across 9 guides · 2026-05-16]
 *Captured: 2026-05-16*
 
 PRINCIPLES.md requires this. Currently inconsistent. Specific terms
@@ -763,7 +807,7 @@ definitions where missing.
 
 ---
 
-### D5 · Photos in callouts where they add clarity
+### D5 · Photos in callouts where they add clarity [INTEGRATED with C6 · 2026-05-16]
 *Captured: 2026-05-16*
 
 See C6. Specific high-value embeds:
@@ -783,7 +827,7 @@ to misdiagnose their plant.
 
 ## E · Website & delivery
 
-### E1 · Update pictures.html (see C7)
+### E1 · Update pictures.html (see C7) [INTEGRATED with C7 · 2026-05-16]
 
 Cross-referenced above.
 
