@@ -326,7 +326,7 @@ own treatment like grapes do.
 Cross-cutting topics that don't naturally fit into a single existing
 guide but would close meaningful loops.
 
-### B1 · "Warm-Season Companions" guide (Guide 7 candidate)
+### B1 · "Warm-Season Companions" guide [INTEGRATED as Guide 7 · 2026-05-16]
 *Captured: 2026-05-16*
 
 A second crop guide on the warm-season track, parallel to Guide 6 on
@@ -833,7 +833,7 @@ Cross-referenced above.
 
 ---
 
-### E2 · "Last updated" date stamp per card on the homepage
+### E2 · "Last updated" date stamp per card on the homepage [INTEGRATED 2026-05-16]
 *Captured: 2026-05-16*
 
 Cards currently show file size + page count but no revision date.
@@ -845,7 +845,7 @@ Useful for trust + signaling activity.
 
 ---
 
-### E3 · Tag-style filters on the homepage
+### E3 · Tag-style filters on the homepage [INTEGRATED 2026-05-16]
 *Captured: 2026-05-16*
 
 Add filter pills above the grid: All / Warm-Season / Cool-Season /
@@ -857,7 +857,7 @@ Hydroponic / Soil / Reference. Click a pill to dim irrelevant cards.
 
 ---
 
-### E4 · "What's new" / changelog page
+### E4 · "What&rsquo;s new" / changelog page [INTEGRATED as changelog.html · 2026-05-16]
 *Captured: 2026-05-16*
 
 A small `changelog.html` (or section on the homepage) listing recent
@@ -870,7 +870,7 @@ they last visited.
 
 ---
 
-### E5 · Mobile-first review of the website
+### E5 · Mobile-first review of the website [INTEGRATED 2026-05-16 — added 480px and 720px breakpoints]
 *Captured: 2026-05-16*
 
 The redesigned homepage uses CSS that should be responsive but hasn't
@@ -886,7 +886,7 @@ as needed.
 
 ---
 
-### E6 · Search across all guides
+### E6 · Search across all guides [INTEGRATED as search.html + search-index.json · 2026-05-16]
 *Captured: 2026-05-16*
 
 A reader looking for a specific variety or term currently has to

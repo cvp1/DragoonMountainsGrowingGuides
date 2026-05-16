@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search &mdash; Dragoon Mountains Growing Guides</title>
+  <style>
+    :root {
+      --paper:        #FBF5E6;
+      --paper-deep:   #F4EAD1;
+      --sand-pale:    #F4E9D0;
+      --sand:         #E6D5B0;
+      --peach:        #EED5BE;
+      --peach-deep:   #E3BE9F;
+      --cream:        #FFFBEE;
+      --body:         #2D2A22;
+      --body-muted:   #7A6F5A;
+      --slate:        #5B5547;
+      --green-dark:   #3D5A3E;
+      --green-mid:    #5B7A53;
+      --green-light:  #8AA379;
+      --green-pale:   #D5DDC0;
+      --green-wash:   #E8EDD6;
+      --border-green: #B7C5A0;
+      --hairline:     #D9CEB1;
+      --terracotta:       #B86848;
+      --terracotta-soft:  #C97D5F;
+      --gold:             #B89054;
+      --shadow-card:  0 1px 2px rgba(61, 90, 62, 0.06),
+                      0 4px 16px rgba(45, 42, 34, 0.06);
+      --shadow-hover: 0 4px 8px rgba(61, 90, 62, 0.06),
+                      0 12px 32px rgba(184, 104, 72, 0.16);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body {
+      font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+      background: var(--paper);
+      color: var(--body);
+      min-height: 100vh;
+      line-height: 1.55;
+    }
+
+    /* Masthead (compact) */
+    .masthead {
+      padding: 36px 28px 32px;
+      max-width: 980px;
+      margin: 0 auto;
+      border-bottom: 1px solid var(--hairline);
+      position: relative;
+    }
+    .masthead::after {
+      content: "";
+      position: absolute;
+      left: 28px; right: 28px; bottom: -1px;
+      height: 2px;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        var(--terracotta-soft) 25%,
+        var(--gold) 50%,
+        var(--green-mid) 75%,
+        transparent 100%);
+      opacity: 0.5;
+    }
+    .nav-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--green-dark);
+      text-decoration: none;
+      padding: 6px 14px;
+      border: 1px solid var(--border-green);
+      background: rgba(255,251,238,0.75);
+      border-radius: 999px;
+      margin-bottom: 16px;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .nav-back:hover { background: var(--green-wash); border-color: var(--green-mid); }
+    .nav-back svg { width: 13px; height: 13px; }
+    .eyebrow {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 8px;
+    }
+    .masthead h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      color: var(--green-dark);
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+    .masthead .lead {
+      color: var(--slate);
+      font-style: italic;
+      max-width: 56ch;
+    }
+
+    /* Search input */
+    .search-area {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 40px 28px 24px;
+    }
+    .search-input-wrap {
+      position: relative;
+    }
+    .search-input-wrap svg.search-icon {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 22px;
+      height: 22px;
+      color: var(--body-muted);
+      pointer-events: none;
+    }
+    .search-input-wrap .clear-btn {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      color: var(--body-muted);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.4rem;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+    .search-input-wrap .clear-btn:hover { background: var(--green-wash); color: var(--green-dark); }
+    .search-input-wrap .clear-btn.visible { display: flex; }
+
+    .search-input {
+      width: 100%;
+      padding: 18px 50px 18px 56px;
+      font-family: Georgia, serif;
+      font-size: 1.15rem;
+      color: var(--body);
+      background: var(--cream);
+      border: 1px solid var(--hairline);
+      border-radius: 10px;
+      box-shadow: var(--shadow-card);
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    .search-input:focus {
+      outline: none;
+      border-color: var(--green-mid);
+      box-shadow: 0 0 0 3px rgba(91, 122, 83, 0.15), var(--shadow-card);
+    }
+
+    .search-meta {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 0.78rem;
+      color: var(--body-muted);
+    }
+    .search-meta .count strong {
+      color: var(--green-dark);
+      font-weight: 700;
+    }
+    .quick-jumps {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .quick-jumps button {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      padding: 4px 11px;
+      border: 1px solid var(--hairline);
+      background: var(--cream);
+      color: var(--slate);
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+    }
+    .quick-jumps button:hover { background: var(--green-wash); border-color: var(--green-mid); color: var(--green-dark); }
+
+    /* Results */
+    main.results {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 16px 28px 80px;
+    }
+
+    .empty-state, .no-results {
+      padding: 48px 24px;
+      text-align: center;
+      color: var(--body-muted);
+      font-style: italic;
+    }
+    .empty-state h2, .no-results h2 {
+      font-family: Georgia, serif;
+      font-style: normal;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 8px;
+    }
+    .empty-state .examples {
+      margin-top: 18px;
+      font-style: normal;
+      color: var(--slate);
+    }
+    .empty-state .examples span {
+      display: inline-block;
+      margin: 4px 6px;
+      padding: 4px 10px;
+      background: var(--cream);
+      border: 1px solid var(--hairline);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+    .empty-state .examples span:hover { background: var(--green-wash); border-color: var(--green-mid); }
+
+    .result-card {
+      display: block;
+      padding: 22px 26px;
+      margin-bottom: 14px;
+      background: var(--cream);
+      border: 1px solid var(--hairline);
+      border-left: 4px solid var(--hairline);
+      border-radius: 6px;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--shadow-card);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+    .result-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+      border-left-color: var(--terracotta);
+    }
+    .result-card .crumb {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 6px;
+    }
+    .result-card .crumb .sep { color: var(--body-muted); font-weight: 400; }
+    .result-card .heading {
+      font-family: Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      line-height: 1.3;
+      letter-spacing: -0.2px;
+      margin-bottom: 8px;
+    }
+    .result-card .snippet {
+      color: var(--slate);
+      font-size: 0.93rem;
+      line-height: 1.55;
+    }
+    .result-card .snippet mark {
+      background: rgba(184, 144, 84, 0.25);
+      color: var(--body);
+      padding: 1px 3px;
+      border-radius: 2px;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px 40px;
+      color: var(--body-muted);
+      font-size: 0.82rem;
+      font-style: italic;
+      border-top: 1px solid var(--hairline);
+      background: var(--sand-pale);
+    }
+    footer .foot-mark {
+      display: block;
+      margin-bottom: 6px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      font-style: normal;
+    }
+
+    @media (max-width: 580px) {
+      .masthead, .search-area, main.results { padding-left: 20px; padding-right: 20px; }
+      .search-input { font-size: 1rem; padding: 14px 44px 14px 48px; }
+      .search-input-wrap svg.search-icon { left: 16px; width: 18px; height: 18px; }
+      .result-card { padding: 18px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="masthead">
+  <a class="nav-back" href="index.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+    Back to Guides
+  </a>
+  <div class="eyebrow">Library Search</div>
+  <h1>Search</h1>
+  <p class="lead">Find a topic, variety, recipe, or technique across all 9 guides. Type any term &mdash; results show the guide and section where it lives.</p>
+</header>
+
+<div class="search-area">
+  <div class="search-input-wrap">
+    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="text" class="search-input" id="searchInput" placeholder="Search the library &mdash; try &ldquo;Masterblend&rdquo;, &ldquo;tepary&rdquo;, &ldquo;cucumber beetle&rdquo;, &ldquo;chill hours&rdquo;..." autocomplete="off" autofocus />
+    <button class="clear-btn" id="clearBtn" aria-label="Clear search">&times;</button>
+  </div>
+  <div class="search-meta">
+    <div class="count" id="countLabel">Type to search across all 9 guides.</div>
+    <div class="quick-jumps">
+      <button data-q="bicarbonate">bicarbonate</button>
+      <button data-q="Masterblend">Masterblend</button>
+      <button data-q="tepary">tepary</button>
+      <button data-q="chill hours">chill hours</button>
+      <button data-q="rocoto">rocoto</button>
+      <button data-q="harlequin">harlequin bug</button>
+    </div>
+  </div>
+</div>
+
+<main class="results" id="results">
+  <div class="empty-state" id="emptyState">
+    <h2>Start typing to search</h2>
+    <p>Every chapter and subsection across the 9 guides is indexed.<br/>Results link directly to the relevant PDF.</p>
+    <div class="examples">
+      <span data-q="tomatoes">tomatoes</span>
+      <span data-q="EC pH">EC pH</span>
+      <span data-q="oak ash">oak ash</span>
+      <span data-q="bato bucket">bato bucket</span>
+      <span data-q="frost">frost</span>
+      <span data-q="garlic">garlic</span>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <span class="foot-mark">DMR · Growing Guides</span>
+  Cochise County &middot; Arizona &middot; written for the Dragoons
+</footer>
+
+<script>
+  (function () {
+    const input = document.getElementById('searchInput');
+    const clearBtn = document.getElementById('clearBtn');
+    const results = document.getElementById('results');
+    const emptyState = document.getElementById('emptyState');
+    const countLabel = document.getElementById('countLabel');
+    let INDEX = null;
+
+    // Fetch the index
+    fetch('search-index.json')
+      .then(r => r.json())
+      .then(data => {
+        INDEX = data;
+        countLabel.innerHTML = '<strong>' + INDEX.length + '</strong> sections indexed across 9 guides.';
+      })
+      .catch(err => {
+        countLabel.textContent = 'Search index failed to load. Reload the page.';
+        console.error(err);
+      });
+
+    function escapeRegExp(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+    function escapeHtml(s) {
+      return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
+
+    function search(q) {
+      if (!INDEX) return [];
+      q = q.trim();
+      if (!q) return [];
+      const terms = q.toLowerCase().split(/\s+/).filter(t => t.length > 0);
+      if (terms.length === 0) return [];
+
+      const scored = [];
+      for (const e of INDEX) {
+        const blob = (e.sh + ' ' + e.b).toLowerCase();
+        const gt = (e.gt || '').toLowerCase();
+        let score = 0;
+        let allMatch = true;
+        for (const term of terms) {
+          if (e.sh.toLowerCase().includes(term)) score += 10;
+          if (gt.includes(term)) score += 4;
+          const bodyCount = (blob.match(new RegExp(escapeRegExp(term), 'g')) || []).length;
+          if (bodyCount === 0) { allMatch = false; break; }
+          score += bodyCount;
+        }
+        if (allMatch) scored.push({ entry: e, score });
+      }
+      scored.sort((a, b) => b.score - a.score);
+      return scored.slice(0, 50);
+    }
+
+    function highlightSnippet(text, terms) {
+      // Find the position of the first term in the text and snip around it
+      let lowerText = text.toLowerCase();
+      let bestPos = -1;
+      for (const term of terms) {
+        const p = lowerText.indexOf(term);
+        if (p >= 0 && (bestPos < 0 || p < bestPos)) bestPos = p;
+      }
+      let snippet;
+      if (bestPos < 0) {
+        snippet = text.substring(0, 260);
+        if (text.length > 260) snippet += '…';
+      } else {
+        const start = Math.max(0, bestPos - 80);
+        const end = Math.min(text.length, bestPos + 200);
+        snippet = (start > 0 ? '…' : '') + text.substring(start, end) + (end < text.length ? '…' : '');
+      }
+      // Escape HTML then highlight terms
+      let safe = escapeHtml(snippet);
+      for (const term of terms) {
+        const re = new RegExp('(' + escapeRegExp(escapeHtml(term)) + ')', 'gi');
+        safe = safe.replace(re, '<mark>$1</mark>');
+      }
+      return safe;
+    }
+
+    function render(q) {
+      if (!q.trim()) {
+        emptyState.style.display = '';
+        // Remove any prior results below the empty state
+        const cards = results.querySelectorAll('.result-card, .no-results');
+        cards.forEach(c => c.remove());
+        countLabel.innerHTML = INDEX
+          ? '<strong>' + INDEX.length + '</strong> sections indexed across 9 guides.'
+          : 'Type to search across all 9 guides.';
+        return;
+      }
+      emptyState.style.display = 'none';
+      const cards = results.querySelectorAll('.result-card, .no-results');
+      cards.forEach(c => c.remove());
+
+      const hits = search(q);
+      const terms = q.trim().toLowerCase().split(/\s+/).filter(t => t.length > 0);
+
+      countLabel.innerHTML = hits.length === 0
+        ? 'No matches for &ldquo;<strong>' + escapeHtml(q) + '</strong>&rdquo;.'
+        : '<strong>' + hits.length + (hits.length === 50 ? '+' : '') + '</strong> match' + (hits.length === 1 ? '' : 'es') + ' for &ldquo;<strong>' + escapeHtml(q) + '</strong>&rdquo;.';
+
+      if (hits.length === 0) {
+        const div = document.createElement('div');
+        div.className = 'no-results';
+        div.innerHTML = '<h2>No results</h2><p>Try a shorter term, check spelling, or browse by category on the <a href="index.html" style="color: var(--terracotta); text-decoration: none; font-weight: 600;">homepage</a>.</p>';
+        results.appendChild(div);
+        return;
+      }
+
+      const frag = document.createDocumentFragment();
+      for (const hit of hits) {
+        const e = hit.entry;
+        const a = document.createElement('a');
+        a.className = 'result-card';
+        a.href = e.pdf;
+        a.target = '_blank';
+        a.innerHTML =
+          '<div class="crumb">' +
+            '<span>Guide ' + escapeHtml(e.g) + ' &middot; ' + escapeHtml(e.gt) + '</span>' +
+            '<span class="sep">&middot;</span>' +
+            '<span>' + escapeHtml(e.s) + '</span>' +
+          '</div>' +
+          '<div class="heading">' + highlightSnippet(e.sh, terms) + '</div>' +
+          '<div class="snippet">' + highlightSnippet(e.b, terms) + '</div>';
+        frag.appendChild(a);
+      }
+      results.appendChild(frag);
+    }
+
+    let timer = null;
+    input.addEventListener('input', () => {
+      const q = input.value;
+      clearBtn.classList.toggle('visible', q.length > 0);
+      clearTimeout(timer);
+      timer = setTimeout(() => render(q), 100);
+    });
+
+    clearBtn.addEventListener('click', () => {
+      input.value = '';
+      clearBtn.classList.remove('visible');
+      input.focus();
+      render('');
+    });
+
+    // Quick-jump pills
+    document.querySelectorAll('[data-q]').forEach(el => {
+      el.addEventListener('click', () => {
+        const q = el.getAttribute('data-q');
+        input.value = q;
+        clearBtn.classList.add('visible');
+        render(q);
+        // Scroll to results
+        results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Allow ?q=foo to pre-fill the search
+    const params = new URLSearchParams(window.location.search);
+    const qParam = params.get('q');
+    if (qParam) {
+      input.value = qParam;
+      clearBtn.classList.add('visible');
+      // Wait for index to load
+      const intv = setInterval(() => {
+        if (INDEX) {
+          render(qParam);
+          clearInterval(intv);
+        }
+      }, 50);
+    }
+  })();
+</script>
+
+</body>
+</html>
