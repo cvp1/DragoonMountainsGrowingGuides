@@ -326,7 +326,7 @@
   </a>
   <div class="eyebrow">Library Search</div>
   <h1>Search</h1>
-  <p class="lead">Find a topic, variety, recipe, or technique across all 9 guides. Type any term &mdash; results show the guide and section where it lives.</p>
+  <p class="lead">Find a topic, variety, recipe, or technique across all 14 guides. Type any term &mdash; results show the guide and section where it lives.</p>
 </header>
 
 <div class="search-area">
@@ -336,7 +336,7 @@
     <button class="clear-btn" id="clearBtn" aria-label="Clear search">&times;</button>
   </div>
   <div class="search-meta">
-    <div class="count" id="countLabel">Type to search across all 9 guides.</div>
+    <div class="count" id="countLabel">Type to search across all 14 guides.</div>
     <div class="quick-jumps">
       <button data-q="bicarbonate">bicarbonate</button>
       <button data-q="Masterblend">Masterblend</button>
@@ -351,7 +351,7 @@
 <main class="results" id="results">
   <div class="empty-state" id="emptyState">
     <h2>Start typing to search</h2>
-    <p>Every chapter and subsection across the 9 guides is indexed.<br/>Results link directly to the relevant PDF.</p>
+    <p>Every chapter and subsection across the 14 guides is indexed.<br/>Results link directly to the relevant PDF.</p>
     <div class="examples">
       <span data-q="tomatoes">tomatoes</span>
       <span data-q="EC pH">EC pH</span>
@@ -382,7 +382,7 @@
       .then(r => r.json())
       .then(data => {
         INDEX = data;
-        countLabel.innerHTML = '<strong>' + INDEX.length + '</strong> sections indexed across 9 guides.';
+        countLabel.innerHTML = '<strong>' + INDEX.length + '</strong> sections indexed across 14 guides.';
       })
       .catch(err => {
         countLabel.textContent = 'Search index failed to load. Reload the page.';
@@ -453,8 +453,8 @@
         const cards = results.querySelectorAll('.result-card, .no-results');
         cards.forEach(c => c.remove());
         countLabel.innerHTML = INDEX
-          ? '<strong>' + INDEX.length + '</strong> sections indexed across 9 guides.'
-          : 'Type to search across all 9 guides.';
+          ? '<strong>' + INDEX.length + '</strong> sections indexed across 14 guides.'
+          : 'Type to search across all 14 guides.';
         return;
       }
       emptyState.style.display = 'none';

@@ -345,7 +345,7 @@ gap. Closes 5–6 backlog items in one volume.
 
 ---
 
-### B2 · IPM master reference
+### B2 · IPM master reference [INTEGRATED in Guide 10 · 2026-05-16]
 *Captured: 2026-05-16*
 
 Pest and disease information is scattered across crop guides (peppers
@@ -372,7 +372,7 @@ appendix to Guide 4.
 
 ---
 
-### B3 · Seed starting & propagation primer
+### B3 · Seed starting & propagation primer [INTEGRATED in Guide 11 · 2026-05-16]
 *Captured: 2026-05-16*
 
 Every crop guide currently handles seeds locally (Guide 1 §5.2 indoor
@@ -397,7 +397,7 @@ starting have nowhere to learn it as a topic.
 
 ---
 
-### B4 · Harvest & preservation reference
+### B4 · Harvest & preservation reference [INTEGRATED as Guide 12 · 2026-05-16]
 *Captured: 2026-05-16*
 
 Pepper drying lives in Guide 1 §9. Brassica per-crop harvest is in
@@ -427,7 +427,7 @@ growing but not preserving leaves the reader stranded in October.
 
 ---
 
-### B5 · Wildlife pressure & exclusion
+### B5 · Wildlife pressure & exclusion [INTEGRATED in Guide 10 · 2026-05-16]
 *Captured: 2026-05-16*
 
 Javelina, packrats, jackrabbits, deer, gopher, snake (yes — for vermin
@@ -453,7 +453,7 @@ section in Guide 4.
 
 ---
 
-### B6 · Composting & soil building
+### B6 · Composting & soil building [INTEGRATED in Guide 11 · 2026-05-16]
 *Captured: 2026-05-16*
 
 Compost is referenced in Guide 1 §5.1 (pepper bed prep) and Guide 6
@@ -482,7 +482,7 @@ chapter in Guide 4.
 
 ---
 
-### B7 · Water sourcing & well primer
+### B7 · Water sourcing & well primer [INTEGRATED as Guide 13 · 2026-05-16]
 *Captured: 2026-05-16*
 
 Water source information lives scattered across Guide 2 §4
@@ -511,7 +511,7 @@ appendix to Guide 4.
 
 ---
 
-### B8 · Greenhouse / hoop house construction
+### B8 · Greenhouse / hoop house construction [INTEGRATED as Guide 14 · 2026-05-16]
 *Captured: 2026-05-16*
 
 Mentioned obliquely in Guide 1 §10 (overwintering) and Guide 6 §3.7
