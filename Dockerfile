@@ -15,6 +15,7 @@ COPY search-index.json /usr/share/nginx/html/
 COPY *.pdf /usr/share/nginx/html/
 COPY pictures/ /usr/share/nginx/html/pictures/
 COPY cheats/ /usr/share/nginx/html/cheats/
+COPY diagrams/ /usr/share/nginx/html/diagrams/
 
 # Ensure nginx can read the served files (host may have restrictive umask)
 RUN chmod -R a+rX /usr/share/nginx/html
