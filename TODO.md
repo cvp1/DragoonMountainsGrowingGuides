@@ -573,7 +573,7 @@ file that's web-friendly.
 
 ---
 
-### C3 · Versioning, changelog, and revision dates per guide [PARTIAL: per-guide version+date INTEGRATED 2026-05-16; CHANGELOG.md still open]
+### C3 · Versioning, changelog, and revision dates per guide [INTEGRATED 2026-05-16 — CHANGELOG.md added at project root]
 *Captured: 2026-05-16*
 
 No guide currently shows a version number or a "last revised" date.
@@ -594,7 +594,7 @@ CHANGELOG.md + index.html.
 
 ---
 
-### C4 · Quick-reference cards (one-page cheat sheets)
+### C4 · Quick-reference cards (one-page cheat sheets) [INTEGRATED as 6 cheats/*.pdf · 2026-05-16]
 *Captured: 2026-05-16*
 
 Each guide could ship with a single-page "cheat sheet" PDF — the most
@@ -617,7 +617,7 @@ homepage gets a "Cheat sheets" section.
 
 ---
 
-### C5 · Print-friendly PDF check
+### C5 · Print-friendly PDF check [PARTIAL: --print build flag added 2026-05-16; actual-paper test still pending]
 *Captured: 2026-05-16*
 
 The PDFs use a cream paper color and link-colored text — beautiful on
@@ -907,7 +907,7 @@ static search, or a server-side endpoint if you're up for it.
 Lower priority or longer time-horizon ideas. Capture so we don't
 lose them.
 
-### F1 · A "First Season" narrative walkthrough
+### F1 · A "First Season" narrative walkthrough [INTEGRATED as first_season.pdf · 2026-05-16]
 *Captured: 2026-05-16*
 
 A single document written as a story: "Your first season in the
@@ -940,9 +940,198 @@ consistency matters.
 ### F4 · Print-bound "Library Vol. 1" PDF
 *Captured: 2026-05-16*
 
-Bundle all 6 guides into a single print-ready PDF with continuous
-pagination and a master table of contents. ~200 pages bound makes a
-nice physical reference.
+Bundle all 14 guides plus the First Season narrative into a single
+print-ready PDF with continuous pagination, master table of contents,
+and combined index/glossary. ~740 pages of reference + 34 pages of
+narrative = an ~800-page bound volume. IngramSpark or Lulu print-on-
+demand at a craft-publishing price point ($45–$75).
+
+*Why it matters:* the print-bound edition is the strongest gift-able
+artifact of the library; also serves the "I just bought a house in
+the Dragoons" use case better than a website.
+
+---
+
+### F5 · Companion plantings & guild design reference
+*Captured: 2026-05-16*
+
+Cross-cutting reference on who plants well with whom across the
+library. Currently scattered: Guide 6 §2.4 brassica companions (alliums
+repel cabbage moth, dill brings parasitic wasps), Guide 1 §5 pepper
+companions (basil, marigold), Guide 9 §1 orchard understory.
+
+A standalone "Companion Plantings & Polycultures" reference would
+consolidate the regional knowledge into a usable matrix: rows for
+each crop, columns for "plant with," "plant near (but not adjacent),"
+"never plant near," with the biological reason in each cell. Could
+extend into permaculture-style guild design for the Dragoons
+(mesquite-anchored guilds, mesquite + native legume + chiltepin +
+agave understory).
+
+*Why it matters:* serves both the beginner ("what goes where?") and
+the expert ("why does this work?"). Place-anchored material:
+companion choices in the Dragoons are different from temperate
+regions because of monsoon dynamics, harlequin-bug pressure, and
+javelina behavior.
+
+*Suggested home:* new **Guide 15 — Companion Plantings &
+Polycultures**, or substantial section added to Guide 11
+(Foundations).
+
+---
+
+### F6 · Native food crops deep dive
+*Captured: 2026-05-16*
+
+The library already names tepary (*Phaseolus acutifolius*), Chiltepin
+(*Capsicum annuum* var. *glabriusculum*), Hopi corn, O'odham 60-day
+corn, and devil's claw — but treats them as items in larger crop
+guides rather than as a coherent body of knowledge. A standalone deep
+dive could cover the full Sonoran-Madrean native food complex:
+
+- **Beans:** tepary (brown/white), Hopi yellow, Anasazi
+- **Corn:** Hopi blue, Painted Mountain, O'odham 60-day, Bloody
+  Butcher, Glass Gem
+- **Peppers:** Chiltepin (wild), New Mexico landrace chiles
+- **Squash & gourds:** native cucurbits, bottle gourd
+- **Devil's claw** (*Proboscidea parviflora*) — pods edible young,
+  fibers used in basketry
+- **Mesquite** (*Prosopis velutina*, *P. juliflora*) — pod
+  harvesting, milling, mesquite flour
+- **Agave** (*Agave palmeri*, *A. parryi*) — traditional roast,
+  modern bacanora/mezcal pointers
+- **Prickly pear** (*Opuntia engelmannii*) — nopalitos and tunas
+- **Amaranth** (*Amaranthus hypochondriacus*) — grain amaranth
+- **Yucca** (*Yucca elata*, *Y. baccata*) — fruit, flower stalks,
+  fibers
+
+*Why it matters:* place-anchoring at its strongest. The library's
+unique value proposition vs generic gardening guides. Cultural depth
+and indigenous food sovereignty connection (Tohono O'odham Community
+Action, Native Seeds/SEARCH).
+
+*Suggested home:* new **Guide 16 — Native Food Crops of the
+Sonoran-Madrean Region**.
+
+---
+
+### F7 · Wall-poster master calendar (large format)
+*Captured: 2026-05-16*
+
+The cheat sheets close the in-garden quick-reference gap on letter
+paper, but a single wall-poster-format master calendar (11×17 or
+18×24) would be the most useful physical artifact. Months across the
+top, crop families down the side, with sow/transplant/harvest icons
+in each cell. Print and tape inside the garden shed.
+
+Builds on `cheats/cheat_master_calendar.pdf` (1 page letter) by
+scaling the same content up to wall-poster dimensions.
+
+*Suggested home:* `cheats/master_calendar_poster.pdf` (built at A2
+or tabloid size).
+
+---
+
+### F8 · Seed-saving annual yields log
+*Captured: 2026-05-16*
+
+Companion to F2 (Annual "What worked / what didn't"). A specific
+templated log for tracking seed-saving across years: variety,
+provenance (Native Seeds/SEARCH / saved from own plant / traded),
+year acquired, year planted, germination rate at age 1 / 2 / 3,
+yield notes, traits to select for. Over multiple seasons, becomes
+the canonical record of which lineages adapted to your specific
+microclimate.
+
+Pairs naturally with F2 as a year-end ritual.
+
+*Why it matters:* turns the library from a static reference into a
+living record. The longer you keep it, the more uniquely valuable
+your saved-seed lineage becomes — your peppers and teparies become
+yours.
+
+*Suggested home:* template document, possibly XLSX or markdown, in a
+new `templates/` subfolder.
+
+---
+
+### F9 · Recipes & kitchen integration
+*Captured: 2026-05-16*
+
+Guide 12 (Harvest, Preservation & Storage) includes a 12-recipe
+starter set but stops short of being a cookbook. A companion volume —
+"What to Cook with This Stuff" — could close the loop from harvest
+through preservation into the daily kitchen. Dragoon-specific recipe
+collection: chile relleno from poblanos, salsa from monsoon tomatoes,
+prickly-pear cocktails, mesquite-flour pancakes, kraut-and-chorizo,
+roasted Hatch green chile season, fig jam, pomegranate molasses
+salads.
+
+*Why it matters:* completes the growing-to-eating loop the library is
+built around. Also crosses over to a broader food-culture audience.
+
+*Suggested home:* new **Guide 17 — From the Garden to the Table**.
+
+---
+
+### F10 · Soil-test interpretation worksheet
+*Captured: 2026-05-16*
+
+A fillable template — a one- or two-page worksheet — that helps a
+reader interpret their UA Cochise Extension soil-test results.
+Columns: parameter, your result, library target range,
+interpretation, action this year, action over 5 years. Pre-populated
+with common Cochise soil-test outputs.
+
+Pairs with Guide 11 §2 (Reading your soil).
+
+*Why it matters:* turns abstract soil chemistry into a concrete
+action plan. Reduces the friction between "I got a soil test" and "I
+know what to do with it."
+
+*Suggested home:* `templates/soil_test_worksheet.pdf` (printable
+form) or interactive HTML.
+
+---
+
+### F11 · Climate-adaptation playbook
+*Captured: 2026-05-16*
+
+How the library extends as climate shifts. The Dragoons are getting
+hotter and drier; monsoon timing is becoming less reliable; chill
+hours are dropping. A playbook chapter would document: what's
+changing year-by-year, which varieties are losing reliability, which
+practices need to evolve (more shade, deeper mulch, more drought-
+tolerant variety selection, water-banking strategies).
+
+Could also serve gardeners in formerly-temperate regions now facing
+Dragoons-like conditions — extending the library's reach outside the
+Madrean Sky Islands.
+
+*Why it matters:* future-proofs the library. As climate shifts, the
+library's relevance grows, but only if it acknowledges the shift.
+
+*Suggested home:* substantial chapter added to Guide 4, or new
+**Guide 18 — Growing in a Changing Climate**.
+
+---
+
+### F12 · Workshop curriculum
+*Captured: 2026-05-16*
+
+The library as the basis for a structured workshop curriculum that
+UA Cooperative Extension Master Gardener programs (or community
+education programs) could adopt and teach. 6–8 session structure
+matching the library's organization: foundations → water →
+nutrients → warm-season → cool-season → preservation. Each session
+gets a lesson plan + handouts derived from the library.
+
+*Why it matters:* the market report's #1 recommendation was partnering
+with UA Cochise Extension. A turn-key curriculum is the practical
+artifact that makes that partnership real.
+
+*Suggested home:* `curriculum/` subfolder with one .md per session;
+the source-of-truth for each lesson plan + handout.
 
 ---
 
