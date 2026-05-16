@@ -946,6 +946,45 @@ nice physical reference.
 
 ---
 
+## Tooling
+
+### Picture sync workflow
+*Captured: 2026-05-16 · INTEGRATED 2026-05-16*
+
+The library now ships with `pictures-manifest.json` as the single
+source of truth for gallery photo metadata, and `scripts/sync-pictures.py`
+as the workflow tool.
+
+**To add a new photo:**
+
+1. Drop a `.jpeg` (or any size `.jpg`) into the `pictures/` folder.
+2. Run `python3 scripts/sync-pictures.py` from the repository root.
+   The script will resize the original to a web-optimized `.jpg`,
+   stub an entry in `pictures-manifest.json`, and regenerate both
+   the gallery section of `pictures.html` and the "From the Field"
+   strip on `index.html`.
+3. Edit the stub in `pictures-manifest.json` to fill in `category`,
+   `title`, `short`, `full`, and set `featured: true` if the photo
+   should appear on the homepage strip (only the first 3 featured
+   photos in manifest order show up there).
+4. Re-run `python3 scripts/sync-pictures.py` to regenerate HTML
+   with your captions.
+5. Commit and redeploy.
+
+The script is idempotent: re-running it does nothing if there are no
+new originals and no manifest changes.
+
+Files involved:
+
+- `pictures-manifest.json` — source of truth (excluded from deploy)
+- `scripts/sync-pictures.py` — build-time tool (excluded from deploy)
+- `pictures.html` — has `<!-- AUTOGEN-GALLERY:START/END -->` markers
+- `index.html` — has `<!-- AUTOGEN-STRIP:START/END -->` markers
+- `.dockerignore` and `.railwayignore` — exclude scripts/ and the
+  manifest from the deployed image
+
+---
+
 ## How to use this file
 
 When a conversation surfaces material that belongs in the library —

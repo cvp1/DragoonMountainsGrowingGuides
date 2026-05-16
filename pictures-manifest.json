@@ -1,0 +1,113 @@
+{
+  "_comment": "Single source of truth for gallery photos. Run scripts/sync-pictures.py after adding/removing entries here to regenerate pictures.html and index.html photo strip. Set 'featured': true on up to 3 entries to show them in the homepage 'From the Field' strip.",
+  "photos": [
+    {
+      "file": "dragoon_mountains_vista.jpg",
+      "category": "Place",
+      "title": "Dragoon Mountains Vista",
+      "short": "The south pasture and mountains — Cochise County, Arizona.",
+      "full": "The Dragoon Mountains from the south pasture — the place that gives the guides their name.",
+      "added": "2026-04-21",
+      "featured": false
+    },
+    {
+      "file": "Buckets4.jpg",
+      "category": "Setup",
+      "title": "Two-Tier Bucket Rack",
+      "short": "Covered patio build — two levels of bato buckets with overhead LED rails and potted citrus behind.",
+      "full": "Two-tier bato bucket rack on the covered patio — seedlings on both levels with overhead LED rails and potted citrus behind.",
+      "added": "2026-04-21",
+      "featured": true
+    },
+    {
+      "file": "bato_bucket_setup.jpg",
+      "category": "Setup",
+      "title": "Bato Bucket Array",
+      "short": "Dual-row Dutch bucket setup — perlite/coco media, drip feed, gravity return.",
+      "full": "Dual-row bato bucket array on the stone patio with hanging LED rail — perlite/coco media, drip feed, gravity return.",
+      "added": "2026-04-17",
+      "featured": false
+    },
+    {
+      "file": "Buckets2.jpg",
+      "category": "Setup",
+      "title": "Media-Filled & Ready",
+      "short": "Perlite-packed buckets awaiting transplant — LED rail in position, feed lines run.",
+      "full": "Freshly media-filled bato buckets ready for transplant — view down the aisle under the hanging LED rail.",
+      "added": "2026-04-21",
+      "featured": false
+    },
+    {
+      "file": "Buckets3.jpg",
+      "category": "Plants",
+      "title": "Early Pepper Seedlings",
+      "short": "Single-row patio build just after transplant — reservoir at the foot, drippers dialed in.",
+      "full": "Pepper seedlings just after transplant into the single-row patio build — reservoir visible at the foot of the row.",
+      "added": "2026-04-21",
+      "featured": false
+    },
+    {
+      "file": "Tomatoes.jpg",
+      "category": "Plants",
+      "title": "Tomato Block",
+      "short": "Young indeterminates on drip feed — ready for stake-and-string training.",
+      "full": "Young indeterminate tomatoes in bato buckets — irrigation lines run, ready to stake and string up.",
+      "added": "2026-04-21",
+      "featured": true
+    },
+    {
+      "file": "NFT_Greens.jpg",
+      "category": "Plants",
+      "title": "NFT Lettuce Tower",
+      "short": "Mature romaine on the nutrient-film tower — open channels ready for the next succession.",
+      "full": "Mature romaine heads on the NFT (nutrient-film) tower with the remaining channels ready for the next succession.",
+      "added": "2026-04-21",
+      "featured": false
+    },
+    {
+      "file": "Herbs.jpg",
+      "category": "Plants",
+      "title": "Kitchen Herb Bench",
+      "short": "Mint, rosemary, thyme, dill & chives under dedicated LED — controller mounted overhead.",
+      "full": "Kitchen herb bench — mint, rosemary, thyme, dill and chives under a dedicated LED with controller on the wall.",
+      "added": "2026-04-21",
+      "featured": true
+    },
+    {
+      "file": "CitrusLemonsLimes.jpg",
+      "category": "Plants",
+      "title": "Potted Citrus",
+      "short": "Lemon & lime trees in large containers — supplemental LED for winter production.",
+      "full": "Potted citrus block — Meyer lemon, Persian lime and kaffir lime in large containers under overhead grow lights.",
+      "added": "2026-04-21",
+      "featured": false
+    },
+    {
+      "file": "IMG_1035.jpg",
+      "category": "Plants",
+      "title": "Tomatoes in Bato Buckets",
+      "short": "Three indeterminate tomatoes climbing in bato buckets — ready for stake-and-string training.",
+      "full": "Indeterminate tomatoes in bato buckets on the covered patio — irrigation lines run, plants reaching the trellis-ready stage.",
+      "added": "2026-05-16",
+      "featured": true
+    },
+    {
+      "file": "IMG_1036.jpg",
+      "category": "Plants",
+      "title": "Citrus in Bloom",
+      "short": "Lemon and lime in flower — full sun, drip-irrigated containers on the patio.",
+      "full": "Patio citrus block — Meyer lemon and Persian lime in large containers, both in bloom, drip-irrigated against the south wall.",
+      "added": "2026-05-16",
+      "featured": false
+    },
+    {
+      "file": "IMG_1037.jpg",
+      "category": "Setup",
+      "title": "Full Pepper Production",
+      "short": "Multi-row bato bucket array with mature pepper plants under hanging LED rails — the system in production.",
+      "full": "Full-production bato bucket array — multi-row pepper crop under the overhead LED rails, with the reservoir visible at the front corner.",
+      "added": "2026-05-16",
+      "featured": true
+    }
+  ]
+}

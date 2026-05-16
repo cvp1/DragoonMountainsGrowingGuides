@@ -29,6 +29,10 @@ pictures/*.jpeg
 pictures/*.JPEG
 pictures/*.JPG
 
+# Build-time tooling — not needed at runtime
+scripts
+pictures-manifest.json
+
 # Superseded PDFs from the pre-consolidation library — kept in git for
 # archival; only the new guide1_*…guide6_* PDFs are deployed.
 dragoon_pepper_growing_guide.pdf

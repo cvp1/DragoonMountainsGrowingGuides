@@ -14,6 +14,12 @@ node_modules
 # Keep only web-optimized .jpg variants of the photos; the raw .jpeg originals
 # are large (4-7 MB each) and would balloon the build context.
 pictures/*.jpeg
+pictures/*.JPEG
+pictures/*.JPG
+
+# Build-time tooling — not needed in the deployed image
+scripts
+pictures-manifest.json
 
 # Superseded by the consolidated 6-guide library (May 2026 restructure).
 # Originals stay in git for archival; only the new guide1_* … guide6_* PDFs
