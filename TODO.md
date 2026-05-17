@@ -32,7 +32,7 @@ preserved below as historical context.
 ### A1 · Cucumbers [INTEGRATED in Guide 7 · §5 · 2026-05-16]
 *Captured: 2026-05-15*
 
-Currently get only a single-line mention in **Guide 4 §10** ("Crop
+Currently get only a single-line mention in **Guide 1 §10** ("Crop
 selection beyond the named guides"). The conversation surfaced enough
 material for at least a 2-page section, possibly a chapter of a new
 guide.
@@ -60,7 +60,7 @@ Notes worth folding in:
 *Why it matters:* a popular beginner crop the library currently doesn't
 serve. Beginners trying to grow cukes get nothing from us.
 
-*Suggested home:* expand **Guide 4 §10** with a half-page profile, OR
+*Suggested home:* expand **Guide 1 §10** with a half-page profile, OR
 spin out a **"Warm-season companions to peppers"** guide covering
 cucumbers + squash + melons + eggplant (see B1).
 
@@ -96,8 +96,8 @@ unaddressed.
 ### A3 · Tomatoes [INTEGRATED in Guide 7 · §3 · 2026-05-16]
 *Captured: 2026-05-16*
 
-Currently mentioned in **Guide 3 Part 1** (Masterblend feeding chart),
-**Guide 4 §10** (one-line profile), and obliquely in **Guide 2 §7**
+Currently mentioned in **Guide 4 Part 1** (Masterblend feeding chart),
+**Guide 1 §10** (one-line profile), and obliquely in **Guide 3 §7**
 (adapting bato bucket for tomatoes). No coherent grow guide.
 
 Tomatoes are probably the *single most-grown crop* by Cochise County
@@ -120,13 +120,13 @@ Material to gather:
   virus vector), splitting (water management).
 - **Soil vs hydroponic** — bato bucket tomatoes are excellent in the
   Dragoons; reservoir tuning differs slightly from peppers (more K
-  during fruiting; covered in Guide 3 already).
+  during fruiting; covered in Guide 4 already).
 
 *Why it matters:* major gap. Library claims to cover warm-season but
 omits the most popular warm-season crop. Violates "well-rounded."
 
 *Suggested home:* a dedicated **Guide 7 — Tomatoes in the Dragoons**,
-mirroring Guide 1's soil + hydroponic structure. OR fold into a
+mirroring Guide 2's soil + hydroponic structure. OR fold into a
 "Warm-season companions" guide (see B1) as one of multiple crops.
 
 ---
@@ -168,7 +168,7 @@ grow year-round.
 ### A5 · Melons [INTEGRATED in Guide 7 · §7 · 2026-05-16]
 *Captured: 2026-05-16*
 
-Mentioned in **Guide 4 §10** as a "future consideration"; no detail
+Mentioned in **Guide 1 §10** as a "future consideration"; no detail
 anywhere.
 
 Material to gather:
@@ -235,7 +235,7 @@ Material to gather:
   pre-brassica or pre-corn).
 
 *Why it matters:* native crops + nitrogen fixation = obvious
-inclusions for a place-anchored library. Mentioned in Guide 4 as a
+inclusions for a place-anchored library. Mentioned in Guide 1 as a
 heritage staple but undelivered.
 
 *Suggested home:* warm-season companions guide (B1), or fold tepary +
@@ -270,8 +270,8 @@ unusual enough that beginners need guidance to attempt it.
 ### A9 · Eggplant [INTEGRATED in Guide 7 · §4 · 2026-05-16]
 *Captured: 2026-05-16*
 
-Listed in **Guide 4 §10** as a 2-line profile; no detail. Eggplant is
-a *Solanum* like peppers and tomatoes — likely most of the Guide 1
+Listed in **Guide 1 §10** as a 2-line profile; no detail. Eggplant is
+a *Solanum* like peppers and tomatoes — likely most of the Guide 2
 infrastructure transfers cleanly.
 
 Material to gather:
@@ -282,14 +282,14 @@ Material to gather:
 - **Trellis or stake** — fruit weight tips plants over.
 - **Flea beetle protection** — major pest at seedling stage; row cover
   early.
-- **Same hydroponic setup as peppers** — fold into Guide 1 §6 or
-  treat as Guide 1 sidebar.
+- **Same hydroponic setup as peppers** — fold into Guide 2 §6 or
+  treat as Guide 2 sidebar.
 
 *Why it matters:* third leg of the warm-season *Solanum* stool;
 underserved.
 
 *Suggested home:* warm-season companions guide (B1), or appendix to
-Guide 1.
+Guide 2.
 
 ---
 
@@ -333,7 +333,7 @@ A second crop guide on the warm-season track, parallel to Guide 6 on
 the cool side. Covers cucumbers, summer squash, melons, eggplant,
 tomatoes, sweet potatoes, sweet corn, beans. Or a subset.
 
-Currently the "warm-season track" only has Guide 1 (peppers) + Guide 5
+Currently the "warm-season track" only has Guide 2 (peppers) + Guide 5
 (grapes). The cool side has all of Guide 6 covering 4 families. The
 asymmetry is visible and addressing it would let A1–A9 above land in
 one place rather than scattered additions.
@@ -349,7 +349,7 @@ gap. Closes 5–6 backlog items in one volume.
 *Captured: 2026-05-16*
 
 Pest and disease information is scattered across crop guides (peppers
-in Guide 1, brassicas in Guide 6, grapes in Guide 5). Cross-cutting
+in Guide 2, brassicas in Guide 6, grapes in Guide 5). Cross-cutting
 pests (aphids, javelina, harlequin bug, powdery mildew, root-knot
 nematodes) appear in 2–3 guides each with no shared baseline.
 
@@ -368,14 +368,14 @@ the full IPM reasoning chain. Also reduces duplication and drift
 between crop guides.
 
 *Suggested home:* **Guide 10 — IPM for the Dragoons**, or a long
-appendix to Guide 4.
+appendix to Guide 1.
 
 ---
 
 ### B3 · Seed starting & propagation primer [INTEGRATED in Guide 11 · 2026-05-16]
 *Captured: 2026-05-16*
 
-Every crop guide currently handles seeds locally (Guide 1 §5.2 indoor
+Every crop guide currently handles seeds locally (Guide 2 §5.2 indoor
 pepper start; Guide 5 §5 own-rooted vines; Guide 6 §2.3 brassica
 direct-sow). Germination temps, light requirements, rockwool prep,
 hardening-off all repeat partially.
@@ -400,7 +400,7 @@ starting have nowhere to learn it as a topic.
 ### B4 · Harvest & preservation reference [INTEGRATED as Guide 12 · 2026-05-16]
 *Captured: 2026-05-16*
 
-Pepper drying lives in Guide 1 §9. Brassica per-crop harvest is in
+Pepper drying lives in Guide 2 §9. Brassica per-crop harvest is in
 Guide 6 §2.6. Grape Brix/TA targets are in Guide 5 §11. No shared
 reference for preserving the harvest (canning, fermenting, freezing,
 dehydration, lacto-fermentation).
@@ -449,14 +449,14 @@ generic guide never has. High value for the "Dragoons voice" of the
 library.
 
 *Suggested home:* **Guide 13 — Wildlife & Exclusion**, or substantial
-section in Guide 4.
+section in Guide 1.
 
 ---
 
 ### B6 · Composting & soil building [INTEGRATED in Guide 11 · 2026-05-16]
 *Captured: 2026-05-16*
 
-Compost is referenced in Guide 1 §5.1 (pepper bed prep) and Guide 6
+Compost is referenced in Guide 2 §5.1 (pepper bed prep) and Guide 6
 §2.1 (brassica bed prep) but never as its own topic. The Dragoons'
 alkaline low-OM soil makes soil-building the single most impactful
 long-term garden activity.
@@ -478,15 +478,15 @@ infinitely deep topic; also "easy to adopt" since a beginner with
 better soil succeeds faster.
 
 *Suggested home:* **Guide 14 — Composting & Soil Building** OR a long
-chapter in Guide 4.
+chapter in Guide 1.
 
 ---
 
 ### B7 · Water sourcing & well primer [INTEGRATED as Guide 13 · 2026-05-16]
 *Captured: 2026-05-16*
 
-Water source information lives scattered across Guide 2 §4
-(bicarbonate protocol), Guide 3 Part 3 (pH chemistry rationale), Guide
+Water source information lives scattered across Guide 3 §4
+(bicarbonate protocol), Guide 4 Part 3 (pH chemistry rationale), Guide
 4 §6 (water summary). No standalone treatment of *the water itself* —
 where it comes from, how to test it, what the typical Cochise County
 profile is, when an RO unit makes sense.
@@ -507,14 +507,14 @@ Topics:
 will get stuck on water before reaching nutrient or system choices.
 
 *Suggested home:* **Guide 15 — Water in Cochise County** or a major
-appendix to Guide 4.
+appendix to Guide 1.
 
 ---
 
 ### B8 · Greenhouse / hoop house construction [INTEGRATED as Guide 14 · 2026-05-16]
 *Captured: 2026-05-16*
 
-Mentioned obliquely in Guide 1 §10 (overwintering) and Guide 6 §3.7
+Mentioned obliquely in Guide 2 §10 (overwintering) and Guide 6 §3.7
 (allium row cover) but no construction-side treatment. Season extension
 in the Dragoons is hugely valuable — both for pepper overwintering and
 for stretching brassica/lettuce window into May.
@@ -542,7 +542,7 @@ both first-timers (step-by-step) and experts (variations).
 
 Cross-library improvements that benefit all guides at once.
 
-### C1 · Glossary appendix [INTEGRATED in Guide 4 · Glossary chapter · 2026-05-16]
+### C1 · Glossary appendix [INTEGRATED in Guide 1 · Glossary chapter · 2026-05-16]
 *Captured: 2026-05-16*
 
 EC, pH, VPD, PPFD, DLI, NFT, DWC, VSP, SHU, mS, ppm, Brix, TA…
@@ -553,11 +553,11 @@ appendix would help readers who land mid-document.
 *Why it matters:* serves "easy to adopt" — beginners get lost in
 jargon. Single glossary lookup is friendlier than digging.
 
-*Suggested home:* appendix at end of Guide 4 (the front-door guide).
+*Suggested home:* appendix at end of Guide 1 (the front-door guide).
 
 ---
 
-### C2 · Variety index across all guides [INTEGRATED in Guide 4 · Variety Index chapter · 2026-05-16]
+### C2 · Variety index across all guides [INTEGRATED in Guide 1 · Variety Index chapter · 2026-05-16]
 *Captured: 2026-05-16*
 
 A reader asking "where do you mention *Costata Romanesco*?" or "which
@@ -568,7 +568,7 @@ help.
 *Why it matters:* helps experts and returning practitioners find
 specific references fast.
 
-*Suggested home:* appendix in Guide 4, OR a small "library_index.md"
+*Suggested home:* appendix in Guide 1, OR a small "library_index.md"
 file that's web-friendly.
 
 ---
@@ -605,7 +605,7 @@ Examples:
 
 - Pepper cheat sheet: variety list with SHU/days/spacing/staking
 - Brassica cheat sheet: variety + transplant date + spacing
-- Master calendar cheat sheet: 12 months × 6 crops (from Guide 4 §9)
+- Master calendar cheat sheet: 12 months × 6 crops (from Guide 1 §9)
 - Masterblend cheat sheet: per-gallon dosing table for pepper/tomato/
   greens
 
@@ -645,10 +645,10 @@ Mountains vista). All the field photos live on the website only.
 
 Specific places where an embedded photo would teach more than prose:
 
-- Guide 1 §7 (staking) — a photo of the Florida-weave training in
+- Guide 2 §7 (staking) — a photo of the Florida-weave training in
   action; the bato bucket pepper trellis
-- Guide 2 §3 (bench construction) — finished bench photo
-- Guide 2 §4 (bicarbonate protocol) — the fizz-test in a jar
+- Guide 3 §3 (bench construction) — finished bench photo
+- Guide 3 §4 (bicarbonate protocol) — the fizz-test in a jar
 - Guide 6 §3 (alliums) — what "tops 50% laid over" actually looks like
 - Guide 6 §5 (root crops) — a photo of properly-thinned carrots
 
@@ -691,11 +691,11 @@ the same library map.
 
 Scope:
 
-- **Guide 1 (Peppers)** — relatedguides block still ends at Guide 6.
+- **Guide 2 (Peppers)** — relatedguides block still ends at Guide 6.
   Needs Guides 7, 8, 9 added with one-line descriptions.
-- **Guide 2 (Bato Buckets)** — same.
-- **Guide 3 (Nutrients)** — same.
-- **Guide 4 (Primer &amp; Library Map)** — most important to update
+- **Guide 3 (Bato Buckets)** — same.
+- **Guide 4 (Nutrients)** — same.
+- **Guide 1 (Primer &amp; Library Map)** — most important to update
   since this is the front door; the "6-guide map" chapter (§3) and
   the by-goal decision tree in §2 both need expanding to mention the
   new crop guides as the natural next step from goals like "grow
@@ -707,7 +707,7 @@ While in each file, also check that any prose cross-references to
 "the 6-guide library" or similar phrasing get updated to "the
 library" or "the nine guides."
 
-For Guide 4 specifically, the master multi-crop calendar (§9) may
+For Guide 1 specifically, the master multi-crop calendar (§9) may
 warrant a refresh now that we have warm-season-companions and
 orchard timing covered elsewhere — extend the table columns or add
 rows for orchard-tree maintenance.
@@ -734,10 +734,10 @@ The existing guides predate the explicit checklist.
 Run the 5-point evaluation checklist (PRINCIPLES.md §"How to evaluate
 a draft") on each:
 
-- **Guide 3 (Nutrients)** — biggest concern. 38 pages, 4 parts. High
+- **Guide 4 (Nutrients)** — biggest concern. 38 pages, 4 parts. High
   risk of intimidating a first-time reader. Needs a "Where do I start?"
   front-piece routing the reader to the right Part based on situation.
-- **Guide 1 (Peppers)** — already has decision matrices and reference
+- **Guide 2 (Peppers)** — already has decision matrices and reference
   tables; spot-check §4 "Choose your track."
 - **Guide 6 (Cool-Season Crops)** — 4 families; verify each family
   chapter opens with its own quick-start decision before the variety
@@ -754,11 +754,11 @@ Capture findings as sub-entries under this item.
 PRINCIPLES.md calls for these but they aren't consistently used.
 Specific candidates:
 
-- Guide 3 — at the top of the table-of-contents page: "If you're new
+- Guide 4 — at the top of the table-of-contents page: "If you're new
   to hydroponic nutrients, start with Part 1 §1 — Masterblend rationale."
 - Guide 6 — at the top of each family chapter
-- Guide 1 §6 (hydroponic track) — "If you've never grown hydro, read
-  Guide 2 first."
+- Guide 2 §6 (hydroponic track) — "If you've never grown hydro, read
+  Guide 3 first."
 
 *Why it matters:* explicit beginner routing reduces "I don't know
 where to look" friction.
@@ -816,8 +816,8 @@ See C6. Specific high-value embeds:
   what curing looks like
 - "Buttoning vs healthy broccoli head" — failure-mode photos in
   Guide 6 §2.6
-- "Bicarbonate fizz test" photo in Guide 2 §4
-- "Stake-and-string trained Rocoto" in Guide 1 §7
+- "Bicarbonate fizz test" photo in Guide 3 §4
+- "Stake-and-string trained Rocoto" in Guide 2 §7
 
 *Why it matters:* failure-mode photos are especially powerful — a
 beginner who has *seen* what buttoning looks like is far less likely
@@ -957,7 +957,7 @@ the Dragoons" use case better than a website.
 
 Cross-cutting reference on who plants well with whom across the
 library. Currently scattered: Guide 6 §2.4 brassica companions (alliums
-repel cabbage moth, dill brings parasitic wasps), Guide 1 §5 pepper
+repel cabbage moth, dill brings parasitic wasps), Guide 2 §5 pepper
 companions (basil, marigold), Guide 9 §1 orchard understory.
 
 A standalone "Companion Plantings & Polycultures" reference would
@@ -1111,7 +1111,7 @@ Madrean Sky Islands.
 *Why it matters:* future-proofs the library. As climate shifts, the
 library's relevance grows, but only if it acknowledges the shift.
 
-*Suggested home:* substantial chapter added to Guide 4, or new
+*Suggested home:* substantial chapter added to Guide 1, or new
 **Guide 18 — Growing in a Changing Climate**.
 
 ---

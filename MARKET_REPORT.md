@@ -25,7 +25,7 @@ The library comprises 14 PDFs spanning approximately 730 pages, with revision da
 
 The editorial principles file commits to a "beginner-to-expert in one document" architecture (decision matrices early, reference tables late, step-numbered protocols, four callout types). This is unusual depth for a free PDF library; comparable in voice and density to Chelsea Green's regional gardening titles or extension service "deep guides."
 
-The hard place-anchor (named local resources: Native Seeds/SEARCH, UA Cochise Extension, Sulphur Springs Valley feed supply, named Sonoita vineyards; heritage crops: Chiltepin, Hopi corn, tepary beans; altitude-adjusted canning at 4,700 ft) is both the library's editorial differentiator and its commercial constraint. A reader in coastal Oregon would find Guide 2 (bato buckets) and Guide 12 (preservation) highly useful and Guide 5 (Dragoons-specific viticulture) largely irrelevant.
+The hard place-anchor (named local resources: Native Seeds/SEARCH, UA Cochise Extension, Sulphur Springs Valley feed supply, named Sonoita vineyards; heritage crops: Chiltepin, Hopi corn, tepary beans; altitude-adjusted canning at 4,700 ft) is both the library's editorial differentiator and its commercial constraint. A reader in coastal Oregon would find Guide 3 (bato buckets) and Guide 12 (preservation) highly useful and Guide 5 (Dragoons-specific viticulture) largely irrelevant.
 
 ---
 
@@ -170,11 +170,11 @@ The 2024 National Gardening Survey from the National Gardening Association repor
 
 ---
 
-### 2.9 Specialty: bato bucket / Dutch bucket hydroponic builders (Guide 2)
+### 2.9 Specialty: bato bucket / Dutch bucket hydroponic builders (Guide 3)
 
 **Size estimate.** Bato/Dutch bucket systems are described in the trade as "probably the most common hydroponics system in the world"[^23]. The DIY hobbyist subset in the US is in the tens of thousands. r/hydroponics overlap.
 
-**Library relevance.** Guide 2 (31 pages) + Guide 3 (47 pages) — a usable 78-page subset.
+**Library relevance.** Guide 3 (31 pages) + Guide 4 (47 pages) — a usable 78-page subset.
 
 **Where they congregate.** Same as 2.3 — Reddit, YouTube, the Hot Pepper.
 
@@ -186,7 +186,7 @@ The 2024 National Gardening Survey from the National Gardening Association repor
 
 **Size estimate.** The Hot Pepper forum (thehotpepper.com) has been continuously active since 2004[^15]. r/HotPeppers, Pepper Lovers Community (Discord/Facebook). US hobbyist pepper-grower count: tens of thousands actively, hundreds of thousands at the casual margin. Hot sauce making at hobbyist scale: ~50,000-100,000 people in the US.
 
-**Library relevance.** Guide 1 (55 pages on peppers including the Chiltepin and Rocoto specialty content) + portions of Guide 12 (preservation, ristra-making, lacto-fermentation) = ~80 highly relevant pages.
+**Library relevance.** Guide 2 (55 pages on peppers including the Chiltepin and Rocoto specialty content) + portions of Guide 12 (preservation, ristra-making, lacto-fermentation) = ~80 highly relevant pages.
 
 **Where they congregate.** The Hot Pepper, r/HotPeppers, Pepper Lovers Community on Facebook, YouTube channels like Khang Starr and Pepper Geek.
 
@@ -268,16 +268,16 @@ Each guide has a discoverability profile. Likely queries that would land readers
 
 | Community | Channel | Best-fit content |
 |---|---|---|
-| r/hydroponics, r/hydro | Reddit | Guide 2 + 3 (bato builds, Masterblend) |
+| r/hydroponics, r/hydro | Reddit | Guide 3 + 3 (bato builds, Masterblend) |
 | r/homestead, r/permaculture | Reddit | Guides 11, 12, 13, 14 |
 | r/gardening, r/vegetablegardening | Reddit | Whole library, framed as "regional case study" |
-| r/HotPeppers | Reddit | Guide 1 (Chiltepin, Rocoto) |
-| The Hot Pepper forum | thehotpepper.com | Guide 1, especially overwintering protocols |
+| r/HotPeppers | Reddit | Guide 2 (Chiltepin, Rocoto) |
+| The Hot Pepper forum | thehotpepper.com | Guide 2, especially overwintering protocols |
 | Tucson Backyard Gardening | Facebook | Whole library |
 | Las Cruces / El Paso regional groups | Facebook | Crop guides, water guide |
-| Pepper Lovers Community | Facebook/Discord | Guide 1 |
+| Pepper Lovers Community | Facebook/Discord | Guide 2 |
 | Permies.com | Forum | Guides 11, 13, 14 |
-| Hydroponic Hobbyist Discord | Discord | Guide 2, 3 |
+| Hydroponic Hobbyist Discord | Discord | Guide 3, 3 |
 
 ### 4.4 YouTube / Instagram-adjacent
 
@@ -390,8 +390,8 @@ If the author wants any revenue at all without changing the free-access model, a
 ### Recommendation 5 — Targeted community seeding, one-time effort (high leverage, low ongoing effort)
 
 A one-time push of well-chosen posts to three communities with content excerpts (not link spam):
-1. r/hydro and r/hydroponics — share Guide 2 (bato builds) and the 5-step Cochise water-treatment protocol as standalone how-tos with link.
-2. The Hot Pepper forum — introduce Guide 1, focus on Rocoto/Chiltepin sections.
+1. r/hydro and r/hydroponics — share Guide 3 (bato builds) and the 5-step Cochise water-treatment protocol as standalone how-tos with link.
+2. The Hot Pepper forum — introduce Guide 2, focus on Rocoto/Chiltepin sections.
 3. r/homestead or r/permaculture — share Guide 13 (water in dry climates) or Guide 11 (composting in dry climate).
 
 This is a few hours of work that durably surfaces the library to the highest-fit non-local audiences. Done well, it generates inbound links, which compound the SEO recommendation above.

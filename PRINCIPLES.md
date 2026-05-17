@@ -92,8 +92,8 @@ standalone-readable.
 
 The library should make it easy for someone new to find their feet:
 
-- **Guide 4** is the front door. It exists to orient newcomers. Any
-  major change to the library should prompt a check that Guide 4 still
+- **Guide 1** is the front door. It exists to orient newcomers. Any
+  major change to the library should prompt a check that Guide 1 still
   works for someone reading it cold.
 - **Every guide opens with `::: relatedguides`** listing the other 5,
   one line each. A reader who picked up the wrong guide should

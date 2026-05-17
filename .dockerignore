@@ -34,3 +34,13 @@ ph_up_down_replacements.pdf
 dragoon_grape_growing_guide.pdf
 bato_bucket_staking_guide.pdf
 dragoon_brassica_growing_guide.pdf
+
+# Stale PDFs from the pre-renumber library (May 2026 renumber pass).
+# Old Guide 1 (peppers) → Guide 2; old Guide 2 (bato) → Guide 3;
+# old Guide 3 (nutrients) → Guide 4; old Guide 4 (primer) → Guide 1.
+# The replacement files (guide{1..4}_*.pdf with new content) ship from disk;
+# these old-named files are excluded so they don't clutter the image.
+guide1_peppers.pdf
+guide2_bato_buckets.pdf
+guide3_nutrients.pdf
+guide4_primer.pdf

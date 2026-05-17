@@ -37,13 +37,13 @@ on letter paper. Closes backlog C4.
 
 ### Major: "Beyond the Dragoons" sky-island adaptation chapter
 
-- **Guide 4** gains a new chapter (§ between Sources & References and
+- **Guide 1** gains a new chapter (§ between Sources & References and
   Glossary) documenting how the library transfers across the Madrean
   Sky Islands archipelago. Close-fits table (Mules, Huachucas,
   Whetstones, Chiricahuas, Animas/Peloncillo). Partial-fits table with
   adjustment notes (Santa Ritas, Santa Catalinas, Pinaleños, Galiuros,
   Patagonia/Canelo). Poor-fits table (Tucson basin, Phoenix, Mt.
-  Lemmon, Flagstaff). The ±1 week per 500 ft rule of thumb. Guide 4
+  Lemmon, Flagstaff). The ±1 week per 500 ft rule of thumb. Guide 1
   grew from 60 to 71 pages.
 
 ### Major: Five reference guides ship — library reaches 14
@@ -67,8 +67,8 @@ Foundations & Systems · Protection & Yield. Two new filter pills
 
 ### Major: Library editorial overhaul
 
-- Glossary appendix added to Guide 4 (50+ terms with cross-references)
-- Variety Index appendix added to Guide 4 (130+ named varieties by
+- Glossary appendix added to Guide 1 (50+ terms with cross-references)
+- Variety Index appendix added to Guide 1 (130+ named varieties by
   crop family)
 - Sources & References appendix added to all 14 guides
 - Inline glossary first-use definitions added across the library
@@ -76,7 +76,7 @@ Foundations & Systems · Protection & Yield. Two new filter pills
   prose
 - "If you're new here" callouts added at the top of long/complex
   chapters
-- "Where do I start?" decision matrix added to Guide 3
+- "Where do I start?" decision matrix added to Guide 4
 - Version + revision date on every guide's title page
 - Related-guides blocks consistent across all 14 guides
 
@@ -100,7 +100,7 @@ Closes backlog C1, C2, C6, D0, D1, D2, D3, D4, D5.
 
 - Homepage redesigned with side-by-side masthead, refined typography,
   thin SVG line icons, hairline borders, dashed dividers replaced.
-- Featured-card treatment for Guide 4 (Start Here) and Guide 1
+- Featured-card treatment for Guide 1 (Start Here) and Guide 2
   (Peppers).
 - Tag-style filters above the guide grid.
 - "Last updated" date stamps per card.
@@ -115,10 +115,10 @@ Closes backlog C1, C2, C6, D0, D1, D2, D3, D4, D5.
 The pepper trilogy (A + C + I), nutrient trio (E + F + G), and bato
 bucket pair (B + I) collapsed into single authoritative guides.
 
-- **Guide 1 — Peppers in the Dragoons** (merges old A + C + I)
-- **Guide 2 — Bato Bucket Hydroponic Systems** (refresh of old B)
-- **Guide 3 — Hydroponic Nutrients** (merges old E + F + G)
-- **Guide 4 — Hydroponic Primer & Library Map** (repurposes old D)
+- **Guide 2 — Peppers in the Dragoons** (merges old A + C + I)
+- **Guide 3 — Bato Bucket Hydroponic Systems** (refresh of old B)
+- **Guide 4 — Hydroponic Nutrients** (merges old E + F + G)
+- **Guide 1 — Hydroponic Primer & Library Map** (repurposes old D)
 - **Guide 5 — Grapes in the Dragoons** (light refresh of old H)
 - **Guide 6 — Cool-Season Crops** (expanded from old J brassicas
   to brassicas + alliums + greens + roots)
