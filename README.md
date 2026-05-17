@@ -1,6 +1,6 @@
 # Dragoon Mountains Growing Guides
 
-A fifteen-guide library for growing food at 4,700 feet in Cochise
+A seventeen-guide library for growing food at 4,700 feet in Cochise
 County, Arizona — written from the eastern flank of the Dragoon
 Mountains, where the wild Chiltepin has grown for millennia, the
 caliche runs close to the surface, and the monsoon decides whether
@@ -40,12 +40,17 @@ that keep the photo gallery and the search index honest.
 | 13 | Water in Cochise County | Well sourcing, testing, treatment, drip design, harvesting |
 | 14 | Season Extension Structures | Cold frames, low tunnels, hoop houses, high tunnels |
 | 15 | Native Food Crops of the Sonoran-Madrean Region | Tepary · Hopi Blue · Chiltepin · mesquite · agave · prickly pear · yucca · devil's claw · amaranth · native squash |
+| 16 | Companion Plantings & Polycultures | Five mechanisms · master matrix · cover crops · nine Dragoons guild designs |
+| 17 | Recipes & Kitchen Integration | Sixteen by-crop chapters · ten worked seasonal menus · ~80 recipes calibrated to a Dragoons harvest |
 
 Plus a narrative companion — *First Season in the Dragoons* — six
 one-page printable cheat sheets (master calendar, variety picks,
-nutrients, water & pH, pests, harvest & preservation), and an 18×24
+nutrients, water & pH, pests, harvest & preservation), an 18×24
 wall-poster edition of the master calendar with sow/transplant/harvest
-icons designed for the garden shed wall.
+icons designed for the garden shed wall, and **Library Vol. 1** — a
+single 1,139-page bound-volume PDF (`library_volume1.pdf`) that
+concatenates all 17 guides + First Season with a master TOC,
+per-guide pagination preserved, and PDF bookmarks for every guide.
 
 ---
 

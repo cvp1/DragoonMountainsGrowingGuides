@@ -937,7 +937,7 @@ consistency matters.
 
 ---
 
-### F4 · Print-bound "Library Vol. 1" PDF
+### F4 · Print-bound "Library Vol. 1" PDF [INTEGRATED as library_volume1.pdf · 2026-05-17 · 1,139 pp · 16.5 MB · master TOC + per-guide pagination + PDF bookmarks]
 *Captured: 2026-05-16*
 
 Bundle all 14 guides plus the First Season narrative into a single
@@ -952,7 +952,7 @@ the Dragoons" use case better than a website.
 
 ---
 
-### F5 · Companion plantings & guild design reference
+### F5 · Companion plantings & guild design reference [INTEGRATED as Guide 16 · 2026-05-17]
 *Captured: 2026-05-16*
 
 Cross-cutting reference on who plants well with whom across the
@@ -1055,7 +1055,7 @@ new `templates/` subfolder.
 
 ---
 
-### F9 · Recipes & kitchen integration
+### F9 · Recipes & kitchen integration [INTEGRATED as Guide 17 · 2026-05-17]
 *Captured: 2026-05-16*
 
 Guide 12 (Harvest, Preservation & Storage) includes a 12-recipe

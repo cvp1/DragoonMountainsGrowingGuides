@@ -58,3 +58,7 @@ guide4_primer.pdf
 
 # Build artifacts
 .railway
+
+# Bound-volume PDF — 16.5 MB derivative artifact.
+# Hosted via GitHub raw URL rather than shipped through Railway.
+library_volume1.pdf
