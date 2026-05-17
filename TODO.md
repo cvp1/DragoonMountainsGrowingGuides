@@ -617,7 +617,7 @@ homepage gets a "Cheat sheets" section.
 
 ---
 
-### C5 · Print-friendly PDF check [PARTIAL: --print build flag added 2026-05-16; actual-paper test still pending]
+### C5 · Print-friendly PDF check [INTEGRATED 2026-05-17: --print mode applied to all 15 guides + first_season + 6 cheats + 1 wall poster; all deployed PDFs now white-paper / dark-text variants]
 *Captured: 2026-05-16*
 
 The PDFs use a cream paper color and link-colored text — beautiful on
