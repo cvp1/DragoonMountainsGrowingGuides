@@ -980,7 +980,7 @@ Polycultures**, or substantial section added to Guide 11
 
 ---
 
-### F6 · Native food crops deep dive
+### F6 · Native food crops deep dive [INTEGRATED as Guide 15 · 2026-05-17]
 *Captured: 2026-05-16*
 
 The library already names tepary (*Phaseolus acutifolius*), Chiltepin
@@ -1015,7 +1015,7 @@ Sonoran-Madrean Region**.
 
 ---
 
-### F7 · Wall-poster master calendar (large format)
+### F7 · Wall-poster master calendar (large format) [INTEGRATED as cheats/master_calendar_poster.pdf · 2026-05-17]
 *Captured: 2026-05-16*
 
 The cheat sheets close the in-garden quick-reference gap on letter
