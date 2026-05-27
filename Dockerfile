@@ -11,6 +11,7 @@ COPY index.html /usr/share/nginx/html/
 COPY pictures.html /usr/share/nginx/html/
 COPY changelog.html /usr/share/nginx/html/
 COPY search.html /usr/share/nginx/html/
+COPY cheats.html /usr/share/nginx/html/
 COPY search-index.json /usr/share/nginx/html/
 COPY *.pdf /usr/share/nginx/html/
 COPY pictures/ /usr/share/nginx/html/pictures/

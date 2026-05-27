@@ -1,8 +1,8 @@
-# Dragoon Mountains Growing Guides
+# Dragoon Mountain Ranch Growing Guides
 
 A seventeen-guide library for growing food at 4,700 feet in Cochise
-County, Arizona — written from the eastern flank of the Dragoon
-Mountains, where the wild Chiltepin has grown for millennia, the
+County, Arizona — written from the east side of the Dragoon Mountains,
+on the ranch, where the wild Chiltepin has grown for millennia, the
 caliche runs close to the surface, and the monsoon decides whether
 August is a triumph or a wash. USDA zone 8a. Sky-island country.
 
