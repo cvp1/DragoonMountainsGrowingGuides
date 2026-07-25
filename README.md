@@ -73,7 +73,8 @@ per-guide pagination preserved, and PDF bookmarks for every guide.
 │   └── *.jpg                 # web-optimized variants (shipped)
 ├── pictures-manifest.json    # source of truth for gallery captions
 ├── scripts/
-│   └── sync-pictures.py      # resize + regenerate gallery HTML
+│   ├── sync-pictures.py      # resize + regenerate gallery HTML
+│   └── publish.sh            # build the publish tree + deploy to Cloudflare Pages
 ├── index.html                # homepage with card grid + filter pills
 ├── pictures.html             # gallery
 ├── search.html               # client-side search
@@ -83,7 +84,6 @@ per-guide pagination preserved, and PDF bookmarks for every guide.
 ├── TODO.md                   # living backlog
 ├── CHANGELOG.md
 ├── MARKET_REPORT.md          # audience research
-├── .dockerignore / .railwayignore
 └── README.md                 # you are here
 ```
 
@@ -267,17 +267,28 @@ your work.
 
 ## Deploy
 
-The site deploys to Railway as a static container. Two ignore files
-keep the build context honest:
+The site is on **Cloudflare Pages** at https://dmr-guides.pages.dev
+(moved off Railway 2026-07-25).
 
-- `.railwayignore` — what Railway uploads (filters the source side)
-- `.dockerignore` — what the Docker build context sees (filters again
-  after upload)
+```sh
+scripts/publish.sh              # build the publish tree, then deploy
+scripts/publish.sh --dry-run    # build + check only, deploy nothing
+```
 
-Both files exclude the same set: `.git`, IDE cruft, raw `.jpeg`
-originals (we ship only the web-optimized `.jpg` variants — 40+ MB of
-upload we don't need), the build scripts, `pictures-manifest.json`,
-and superseded PDFs from earlier library structures.
+**The repo root is not the doc root.** `README.md`, `AGENT.md`,
+`TODO.md`, `MARKET_REPORT.md`, `PRINCIPLES.md`, and `scripts/` live here
+but are never served — so never run `wrangler pages deploy .` against
+the repo root.
+
+`publish.sh` ships only files **tracked in git**, which is what keeps
+the deployed site reproducible from a clone and automatically excludes
+the raw `.jpeg` camera originals (gitignored) and any stale renumbered
+PDFs sitting on the Syncthing disk. Railway needed two hand-maintained
+ignore files for that; git already knows the difference.
+
+Before deploying, the script hard-fails if the publish tree contains any
+`.md`/`.py`/`Dockerfile`/`.conf`, if any local link is broken, or if a
+top-level `.html` page is tracked in git but not in the ship list.
 
 After a renumber or restructure, add the stale old filenames to both
 ignore files so they don't ship from the Syncthing-managed disk.

@@ -6,11 +6,12 @@
 #   scripts/publish.sh            # deploy to production
 #   scripts/publish.sh --dry-run  # build + check the tree, deploy nothing
 #
-# WHY A BUILD STEP AT ALL — the repo root is NOT the doc root. Railway's
-# Dockerfile used an explicit COPY allow-list, so MARKET_REPORT.md, TODO.md,
-# AGENT.md, PRINCIPLES.md, and scripts/ were never served. Deploying the repo
-# root to Pages would publish all of them. This script reproduces that
-# allow-list and then *verifies* the result rather than trusting it.
+# WHY A BUILD STEP AT ALL — the repo root is NOT the doc root. The old Railway
+# Dockerfile (deleted with the rest of that setup) used an explicit COPY
+# allow-list, so MARKET_REPORT.md, TODO.md, AGENT.md, PRINCIPLES.md, and
+# scripts/ were never served. Deploying the repo root to Pages would publish
+# all of them. This script is now the only thing standing between the repo and
+# the public site, so it verifies its own output rather than trusting the copy.
 set -euo pipefail
 
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -25,15 +26,26 @@ cd "$REPO"
 rm -rf "$OUT"; mkdir -p "$OUT"
 
 # --- the allow-list ----------------------------------------------------------
-cp index.html pictures.html changelog.html search.html cheats.html 404.html \
-   search-index.json "$OUT/"
-# All guide PDFs EXCEPT the 16.5 MB bound volume, which is linked from GitHub
-# raw instead of shipped (index.html points at the raw URL, not a local path).
-for p in *.pdf; do
-  [ "$p" = "library_volume1.pdf" ] && continue
-  cp "$p" "$OUT/"
-done
-cp -r pictures cheats diagrams "$OUT/"
+# Everything shipped must be TRACKED IN GIT. That is what makes the deployed
+# site reproducible from a clone, and it replaces two hand-maintained exclusion
+# lists the Railway setup needed:
+#   - stale renumbered PDFs (guide1_peppers.pdf and friends) that linger on the
+#     Syncthing-managed disk but were never committed
+#   - the raw .jpeg/.JPG camera originals, which are gitignored
+# A plain `cp *.pdf` or `cp -r pictures` would ship both. Git already knows the
+# difference, so there is no list to keep in sync.
+ship() {  # ship <git-pathspec>...
+  git ls-files -z -- "$@" | while IFS= read -r -d '' f; do
+    mkdir -p "$OUT/$(dirname "$f")"
+    cp "$f" "$OUT/$f"
+  done
+}
+ship 'index.html' 'pictures.html' 'changelog.html' 'search.html' 'cheats.html' \
+     '404.html' 'search-index.json'
+# All guide PDFs EXCEPT the 16.5 MB bound volume, which index.html links from
+# the GitHub raw URL rather than shipping.
+ship '*.pdf' ':!library_volume1.pdf'
+ship 'pictures/*' 'cheats/*' 'diagrams/*'
 
 # --- refuse to ship anything that was never meant to be public ---------------
 LEAKED=$(find "$OUT" -type f \( -name '*.md' -o -name '*.py' -o -name 'Dockerfile*' \
@@ -64,8 +76,21 @@ for h in glob.glob(os.path.join(out, "*.html")):
             missing.add(f"{os.path.basename(h)} -> {m}")
 if missing:
     sys.exit("ABORT: broken local links:\n  " + "\n  ".join(sorted(missing)))
+
+# The old Dockerfile listed each HTML page by hand, so adding a page and
+# forgetting to list it silently shipped a site without it. Catch that here
+# instead of leaving it as a note in AGENT.md for someone to remember.
+import subprocess
+tracked = subprocess.run(["git", "ls-files", "*.html"], capture_output=True,
+                         text=True).stdout.split()
+unshipped = [h for h in tracked if "/" not in h and not os.path.exists(os.path.join(out, h))]
+if unshipped:
+    sys.exit("ABORT: top-level pages tracked in git but not shipped: "
+             f"{unshipped}\n  Add them to the `ship` list in scripts/publish.sh.")
+
 n = len([f for r, _, fs in os.walk(out) for f in fs])
-print(f"publish tree OK: {n} files, no broken local links, nothing private")
+print(f"publish tree OK: {n} files, no broken local links, nothing private, "
+      "every tracked page shipped")
 PY
 
 if [ "$DRY_RUN" = 1 ]; then

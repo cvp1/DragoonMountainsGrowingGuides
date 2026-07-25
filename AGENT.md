@@ -106,9 +106,12 @@ agent's job is to make changes in the working tree; the user reviews
 push`, and should be careful with `git commit` — only commit when the
 user explicitly says so.
 
-Deploy goes through Railway (`railway up` from the Mac terminal, or
-git-triggered deploy from the GitHub repo). The agent doesn't deploy;
-the user does. See §5.3.
+Deploy goes through Cloudflare Pages: `scripts/publish.sh` from the Mac
+terminal (`--dry-run` to build and check without deploying). The agent
+doesn't deploy; the user does. See §5.3.
+
+The library was on Railway until 2026-07-25. `railway up` no longer
+deploys anything, and that service is gone.
 
 ---
 
@@ -118,7 +121,7 @@ the user does. See §5.3.
 DragoonMountainsGrowingGuides/
 ├── guide{1..17}_*.pdf       # the 17 deployed guides (compressed)
 ├── first_season.pdf         # narrative companion
-├── library_volume1.pdf      # bound-volume (excluded from Railway deploy)
+├── library_volume1.pdf      # bound-volume (not deployed; linked from GitHub raw)
 ├── README.md                # front-of-repo doc, also linked from GitHub
 ├── AGENT.md                 # this file
 ├── PRINCIPLES.md            # editorial north star — read before drafting
@@ -132,9 +135,6 @@ DragoonMountainsGrowingGuides/
 ├── pictures.html            # photo gallery
 ├── search-index.json        # built search index (~1.6 MB)
 ├── pictures-manifest.json   # source of truth for gallery (excluded)
-├── Dockerfile               # nginx:alpine static deploy
-├── nginx.conf               # serving config
-├── .dockerignore / .railwayignore
 ├── cheats/
 │   └── cheat_*.pdf          # 6 letter-size + 1 wall poster
 ├── pictures/
@@ -271,9 +271,9 @@ saved to a file). The master TOC's starting-page numbers are calibrated
 to a 4-page frontmatter; if you change the frontmatter length, update
 the TOC numbers.
 
-**Vol. 1 does not ship to Railway.** It's listed in `.dockerignore` and
-`.railwayignore`. The homepage link points to a GitHub raw URL so the
-download comes from GitHub's CDN. After regenerating Vol. 1, the user
+**Vol. 1 is not deployed.** `scripts/publish.sh` excludes it by name. The
+homepage link points to a GitHub raw URL so the download comes from
+GitHub's CDN. After regenerating Vol. 1, the user
 must `git push` for the new version to surface.
 
 ### 3.6 Search index rebuild
@@ -285,8 +285,8 @@ python3 scripts/build_search_index.py /path/to/repo/search-index.json
 The script walks every `guide*.md` source, parses H1/H2/H3 hierarchy,
 extracts body excerpts (capped at 1500 chars at word boundary),
 normalizes markdown out, and emits the JSON the static search page
-consumes. Rerun after any guide edit. The output file ships to Railway
-and is served gzipped by nginx.
+consumes. Rerun after any guide edit. The output file ships with the site
+and is served gzipped by Cloudflare.
 
 ### 3.7 Picture sync
 
@@ -461,18 +461,21 @@ sacrificing voice quality, provided the specs are detailed enough.
 3. **Library cascade is mechanical and error-prone.** When sed-inserting
    a new relatedguides bullet after the highest-numbered guide, double-check
    Guide 1 doesn't have the same string as an H2 header. (§4.6)
-4. **`library_volume1.pdf` is 16.5 MB and excluded from Railway.** The
+4. **`library_volume1.pdf` is 16.5 MB and is not deployed.** The
    homepage link points to a GitHub raw URL. After regenerating, the
    user must push for the link to serve the new version. (§3.5)
 5. **PDFs compressed with `gs -dPDFSETTINGS=/ebook` are ~50% smaller**
    with no visible loss. Always compress before deploy. (§3.4)
-6. **The Dockerfile lists each HTML file explicitly.** When you add a
-   new top-level HTML page (e.g., the `cheats.html` listing), add it to
-   the Dockerfile COPY list or it won't ship.
+6. **`scripts/publish.sh` lists each HTML page explicitly.** When you add
+   a new top-level HTML page, add it to the `ship` list or it won't
+   deploy. The script now hard-fails on this rather than shipping a site
+   with the page missing, so you'll be told — but you still have to fix it.
 7. **Stale renumbered PDFs.** After the May 2026 renumber, stale
    filenames (`guide1_peppers.pdf`, etc.) lingered on the Syncthing-managed
-   disk. Both `.dockerignore` and `.railwayignore` carry exclusion lines
-   for them so they don't deploy. Don't remove those lines.
+   disk. Railway needed hand-maintained exclusion lines for them.
+   `scripts/publish.sh` ships only git-tracked files, so anything never
+   committed cannot deploy — the exclusion lists are gone and there is
+   nothing left to keep in sync.
 8. **`pifont` and DejaVu Sans Mono** are in the build pipeline because
    the wall poster uses `\ding{}` icons and code blocks (Guide 16's guild
    diagrams) need Unicode box-drawing chars. Don't remove from
