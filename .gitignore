@@ -20,3 +20,6 @@ __pycache__
 # Build / deploy artifacts
 .railway
 *.log
+
+# Local build output from scripts/publish.sh
+.publish/
