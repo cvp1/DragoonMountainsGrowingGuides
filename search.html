@@ -377,7 +377,6 @@
     const countLabel = document.getElementById('countLabel');
     let INDEX = null;
 
-    // Fetch the index
     fetch('search-index.json')
       .then(r => r.json())
       .then(data => {
@@ -518,7 +517,6 @@
         input.value = q;
         clearBtn.classList.add('visible');
         render(q);
-        // Scroll to results
         results.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });

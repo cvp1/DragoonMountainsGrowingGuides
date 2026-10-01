@@ -1,17 +1,8 @@
 #!/usr/bin/env bash
-# publish.sh — build the deployable tree and push it to Cloudflare Pages.
-#
-# Replaces `railway up --detach` (the library moved off Railway 2026-07-25).
+# Build the deployable tree from an allow-list, verify it, and deploy to Cloudflare Pages.
 # Usage:
 #   scripts/publish.sh            # deploy to production
 #   scripts/publish.sh --dry-run  # build + check the tree, deploy nothing
-#
-# WHY A BUILD STEP AT ALL — the repo root is NOT the doc root. The old Railway
-# Dockerfile (deleted with the rest of that setup) used an explicit COPY
-# allow-list, so MARKET_REPORT.md, TODO.md, AGENT.md, PRINCIPLES.md, and
-# scripts/ were never served. Deploying the repo root to Pages would publish
-# all of them. This script is now the only thing standing between the repo and
-# the public site, so it verifies its own output rather than trusting the copy.
 set -euo pipefail
 
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -25,15 +16,7 @@ DRY_RUN=0
 cd "$REPO"
 rm -rf "$OUT"; mkdir -p "$OUT"
 
-# --- the allow-list ----------------------------------------------------------
-# Everything shipped must be TRACKED IN GIT. That is what makes the deployed
-# site reproducible from a clone, and it replaces two hand-maintained exclusion
-# lists the Railway setup needed:
-#   - stale renumbered PDFs (guide1_peppers.pdf and friends) that linger on the
-#     Syncthing-managed disk but were never committed
-#   - the raw .jpeg/.JPG camera originals, which are gitignored
-# A plain `cp *.pdf` or `cp -r pictures` would ship both. Git already knows the
-# difference, so there is no list to keep in sync.
+# Ship only git-tracked files, so untracked PDFs and gitignored camera originals stay out.
 ship() {  # ship <git-pathspec>...
   git ls-files -z -- "$@" | while IFS= read -r -d '' f; do
     mkdir -p "$OUT/$(dirname "$f")"
@@ -42,8 +25,7 @@ ship() {  # ship <git-pathspec>...
 }
 ship 'index.html' 'pictures.html' 'changelog.html' 'search.html' 'cheats.html' \
      '404.html' 'search-index.json'
-# All guide PDFs EXCEPT the 16.5 MB bound volume, which index.html links from
-# the GitHub raw URL rather than shipping.
+# The bound volume is linked from GitHub, not shipped.
 ship '*.pdf' ':!library_volume1.pdf'
 ship 'pictures/*' 'cheats/*' 'diagrams/*'
 
@@ -65,10 +47,7 @@ for h in glob.glob(os.path.join(out, "*.html")):
     for m in re.findall(r'(?:href|src)="([^"#]+)"', open(h, encoding="utf-8", errors="replace").read()):
         if m.startswith(("http://", "https://", "mailto:", "data:", "javascript:")):
             continue
-        # Root-relative ("/search.html") and document-relative ("search.html")
-        # both resolve against the publish root here. os.path.join would
-        # silently discard `out` for the leading-slash form and then "find"
-        # the file on the real filesystem — a checker that passes by accident.
+        # Strip the leading slash so os.path.join resolves against the publish root.
         rel = m.split("?")[0].lstrip("/")
         if rel in ("", "."):
             continue
@@ -77,9 +56,7 @@ for h in glob.glob(os.path.join(out, "*.html")):
 if missing:
     sys.exit("ABORT: broken local links:\n  " + "\n  ".join(sorted(missing)))
 
-# The old Dockerfile listed each HTML page by hand, so adding a page and
-# forgetting to list it silently shipped a site without it. Catch that here
-# instead of leaving it as a note in AGENT.md for someone to remember.
+# Every tracked top-level page must be in the ship list.
 import subprocess
 tracked = subprocess.run(["git", "ls-files", "*.html"], capture_output=True,
                          text=True).stdout.split()

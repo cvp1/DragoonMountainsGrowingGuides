@@ -2,9 +2,8 @@
 """
 Rebuild search-index.json from the guide markdown sources.
 
-Walks build/guide{1..15}_*.md, parses H1/H2/H3 heading hierarchy, extracts
-section-body text, normalizes markdown out, emits the JSON the static
-search page consumes (fields: g, gt, pdf, s, sh, b).
+Splits build/guide*_*.md into H1/H2/H3 sections, flattens each to plain text,
+and emits the JSON the static search page consumes (fields: g, gt, pdf, s, sh, b).
 
 Run from build/:
     python3 build_search_index.py [OUTPUT_PATH]
@@ -51,7 +50,6 @@ def normalize_body(raw: str) -> str:
     # Strip ::: callout wrappers (keep inner text)
     s = re.sub(r'^:::\s*\w+\s*$', '', s, flags=re.MULTILINE)
     s = re.sub(r'^:::\s*$', '', s, flags=re.MULTILINE)
-    # Strip images
     s = re.sub(r'!\[[^\]]*\]\([^)]*\)\{?[^}]*\}?', ' ', s)
     # Strip raw LaTeX commands like \clearpage, \vspace{...}, \textcolor{x}{y}
     # Handle commands with braced args by replacing with the last arg's content
@@ -78,10 +76,8 @@ def normalize_body(raw: str) -> str:
             continue  # table separator
         out_lines.append(line)
     s = '\n'.join(out_lines)
-    # Bullet markers
     s = re.sub(r'^\s*[-*+]\s+', '', s, flags=re.MULTILINE)
     s = re.sub(r'^\s*\d+\.\s+', '', s, flags=re.MULTILINE)
-    # Collapse whitespace
     s = re.sub(r'\s+', ' ', s).strip()
     return s
 
@@ -118,7 +114,6 @@ def extract_entries(md_text: str, meta: dict, pdf_name: str, guide_num: str):
     path_stack: list[tuple[int, str]] = []
     h1_section_num: dict[int, str] = {}  # heading idx → §N
 
-    # Build entries
     entries = []
     for idx, (line_i, level, title) in enumerate(headings):
         if level == 1:
@@ -128,7 +123,6 @@ def extract_entries(md_text: str, meta: dict, pdf_name: str, guide_num: str):
             path_stack = [(1, title)]
             sh = title
         else:
-            # Find parent H1
             while path_stack and path_stack[-1][0] >= level:
                 path_stack.pop()
             path_stack.append((level, title))

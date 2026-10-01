@@ -1,46 +1,12 @@
 #!/usr/bin/env python3
 """
-sync-pictures.py — keep gallery photos and HTML in sync.
+Resize new photo originals in pictures/, stub missing pictures-manifest.json
+entries, and regenerate the AUTOGEN gallery (pictures.html) and featured strip
+(index.html) from the manifest. Existing captions are never overwritten;
+the first 3 entries with "featured": true appear on the homepage strip.
 
-What it does, in order:
-
-1. Scans pictures/ for any .jpeg/.JPEG/.JPG originals and produces a
-   web-optimized .jpg next to each one (max 1600px on the long edge,
-   progressive JPEG at quality 82, EXIF orientation applied).
-
-2. Updates pictures-manifest.json with stub entries for any .jpg in
-   pictures/ that doesn't already have a manifest entry. Existing
-   entries are preserved (won't overwrite your captions).
-
-3. Regenerates the gallery section of pictures.html from the manifest
-   (everything between the AUTOGEN-GALLERY:START and AUTOGEN-GALLERY:END
-   markers).
-
-4. Regenerates the "From the Field" strip on index.html from the
-   manifest's featured photos (between AUTOGEN-STRIP:START and
-   AUTOGEN-STRIP:END markers).
-
-Workflow:
-    # Drop your new photos into pictures/ (any size, .jpeg or .jpg)
-    cd /path/to/DMR
+Usage:
     python3 scripts/sync-pictures.py
-
-    # Then edit pictures-manifest.json to fill in captions for any
-    # newly-stubbed entries (category, title, short, full). If you
-    # want a photo to appear on the homepage strip, set "featured": true.
-
-    # Re-run the sync to regenerate HTML with your captions:
-    python3 scripts/sync-pictures.py
-
-    # Commit & redeploy.
-
-Notes:
-    - You can have more than 3 photos with "featured": true; only the
-      first 3 (in manifest order) show on the homepage strip.
-    - The script never overwrites your manifest captions — only adds
-      new entries with reasonable defaults.
-    - Removing a photo: delete its manifest entry (and optionally the
-      .jpg file), then re-run.
 """
 
 import json
@@ -58,16 +24,14 @@ except ImportError:
     sys.exit(1)
 
 
-# ---------- Paths ----------
 HERE = Path(__file__).resolve().parent.parent  # DMR/
 PICTURES_DIR = HERE / "pictures"
 MANIFEST = HERE / "pictures-manifest.json"
 PICTURES_HTML = HERE / "pictures.html"
 INDEX_HTML = HERE / "index.html"
 
-# ---------- Constants ----------
 MAX_DIMENSION = 1600          # long-edge in px for web-optimized .jpg
-JPEG_QUALITY = 82             # subjective sweet spot
+JPEG_QUALITY = 82
 HOMEPAGE_STRIP_SIZE = 3       # number of featured photos to show on homepage
 
 
